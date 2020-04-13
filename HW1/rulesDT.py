@@ -1,7 +1,8 @@
 import gc
 import math
 import pandas as pd
-
+import networkx as nx
+import matplotlib.pyplot as plt
 from netaddr import *
 
 NUM_OF_BITS = 64
@@ -62,4 +63,76 @@ def conditional_entropy(rules_df, conditions=None):
     return [entropy(p) for p in P]
 
 
-print(conditional_entropy(rules_df, {0: '1', 1: '0'}))
+gains = conditional_entropy(rules_df, {})
+decision_tree = nx.Graph()
+first_node = gains.index(max(gains))
+decision_tree.add_node(str(first_node))
+
+
+def ip_view(d):
+
+    return ''.join(list(map(lambda k: d[k] if k in d.keys() else '_', range(64))))
+
+
+def add_nodes(last_node, knowledge, which_to_check, to_connect, h):
+
+    if which_to_check.count(0) == len(which_to_check):
+        return
+
+    which_to_check[last_node] = 0
+    prior_knowledge_zero = knowledge.copy()
+    prior_knowledge_one = knowledge.copy()
+    prior_knowledge_zero[last_node] = '0'
+    prior_knowledge_one[last_node] = '1'
+    
+    gain_zero = conditional_entropy(rules_df, prior_knowledge_zero)
+    gain_zero = [a * b for a, b in zip(gain_zero, which_to_check)]
+    zero_node = gain_zero.index(max(gain_zero))
+    gain_one = conditional_entropy(rules_df, prior_knowledge_one)
+    gain_one = [a * b for a, b in zip(gain_one, which_to_check)]
+    one_node = gain_one.index(max(gain_one))
+
+    zero_node_str = ip_view(prior_knowledge_zero)
+    print(zero_node_str)
+    zero_edge = (to_connect, zero_node_str)
+    decision_tree.add_edge(*zero_edge)
+    one_node_str = ip_view(prior_knowledge_one)
+    print(one_node_str)
+    one_edge = (to_connect, one_node_str)
+    decision_tree.add_edge(*one_edge)
+
+    add_nodes(zero_node, prior_knowledge_zero.copy(), which_to_check.copy(), zero_node_str, h + 1)
+    add_nodes(one_node, prior_knowledge_one.copy(), which_to_check.copy(), one_node_str, h + 1)
+
+
+to_check = [1] * 64
+to_check[first_node] = 0
+add_nodes(first_node, {}, to_check, str(first_node), 0)
+add_nodes(first_node, {}, to_check, str(first_node), 0)
+
+
+nx.draw(decision_tree, with_labels=True)
+plt.show()
+
+
+
+#products = [a * b for a, b in zip(list1, list2)]
+
+
+
+"""
+G=nx.Graph()
+G.add_node("a")
+
+edge = ("a", "e")
+G.add_edge(*edge)
+edge = ("a", "b")
+G.add_edge(*edge)
+
+print("Nodes of graph: ")
+print(G.nodes())
+print("Edges of graph: ")
+print(G.edges())
+plt.savefig("simple_path.png") # save as png
+nx.draw(G, with_labels=True)
+plt.show()"""
