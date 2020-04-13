@@ -1,10 +1,8 @@
 import gc
 import math
-import numpy as np
 import pandas as pd
 
 from netaddr import *
-from operator import add, truediv
 
 NUM_OF_BITS = 64
 
@@ -22,50 +20,46 @@ def ip_to_rule(ip_addr):
     return net
 
 
+def rule_power(rule):
+    return 2 ** rule.count('*')
+
+
 # Yakir - process the data
 rules_df['src_ip_rule'] = rules_df['src_ip'].apply(ip_to_rule)
 rules_df['dst_ip_rule'] = rules_df['dst_ip'].apply(ip_to_rule)
 rules_df['rule'] = rules_df['src_ip_rule'] + rules_df['dst_ip_rule']
+rules_df['rule_power'] = rules_df['rule'].apply(rule_power)
 
 del rules_df['src_ip_rule']
 del rules_df['dst_ip_rule']
-# rules_df = rules_df.drop(columns=['src_ip_rule', 'dst_ip_rule'])
-
 gc.collect()
-binary = rules_df['rule'].str.replace('*','2')[:10]
 
 
-def best_gain(given_bits):
+def get_rules_by_condition(rules_df, conditions):
+    for b_i, value in conditions.items():
+        rules_df = rules_df.loc[(rules_df['rule'].str[b_i] == value) |
+                                (rules_df['rule'].str[b_i] == '*')]
+    return rules_df
 
-    res = binary
-    for key in given_bits.keys():
-        res = list(filter(lambda i: i[key] == given_bits[key], res))
-    print(len(res))
 
-    def is_two(bit):
-        if bit == '2':
-            return 1
-        return 0
+def conditional_entropy(rules_df, conditions=None):
+    if conditions is not None:
+        rules_df = get_rules_by_condition(rules_df, conditions)
+    P = [0] * 64
+    total_rule_power = rules_df['rule_power'].sum()
+    for bi in range(0, 64):
+        try:
+            P[bi] = (rules_df.loc[(rules_df['rule'].str[bi] == '0'), 'rule_power'].sum() +
+                     rules_df.loc[(rules_df['rule'].str[bi] == '*'), 'rule_power'].sum() / 2) / total_rule_power
+        except ZeroDivisionError:
+            P[bi] = 0
 
-    num_of_bits = range(NUM_OF_BITS)
-    real_len = [len(res)] * NUM_OF_BITS
-    tows = map(lambda bit: sum(map(lambda x: is_two(x[bit]), res)), num_of_bits)
-    total = map(lambda bit: sum(map(lambda x: int(x[bit]), res)), num_of_bits)
-    new_len = map(add, tows, real_len)
-
-    probability = list(map(truediv, total, new_len))
-
-    print(total)
-    print(probability)
-
-    def I_E(f):
-        if f == 0 or f == 1:
+    def entropy(p):
+        if p == 1 or p == 0:
             return 0
-        return - (f * math.log2(f) + (1 - f) * math.log2(1 - f))
+        return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
 
-    gains = list(map(I_E, probability))
-
-    print(gains.index(max(gains)))
+    return [entropy(p) for p in P]
 
 
-best_gain({1:'0', 63:'1'})
+print(conditional_entropy(rules_df, {0: '1', 1: '0'}))
