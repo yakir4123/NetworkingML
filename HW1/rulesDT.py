@@ -113,26 +113,3 @@ add_nodes(first_node, {}, to_check, str(first_node), 0)
 
 nx.draw(decision_tree, with_labels=True)
 plt.show()
-
-
-
-#products = [a * b for a, b in zip(list1, list2)]
-
-
-
-"""
-G=nx.Graph()
-G.add_node("a")
-
-edge = ("a", "e")
-G.add_edge(*edge)
-edge = ("a", "b")
-G.add_edge(*edge)
-
-print("Nodes of graph: ")
-print(G.nodes())
-print("Edges of graph: ")
-print(G.edges())
-plt.savefig("simple_path.png") # save as png
-nx.draw(G, with_labels=True)
-plt.show()"""
