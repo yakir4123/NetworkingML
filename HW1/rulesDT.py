@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from netaddr import *
 
 NUM_OF_BITS = 64
+HIGH = 16
 
 rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
                        names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
@@ -36,22 +37,22 @@ del rules_df['dst_ip_rule']
 gc.collect()
 
 
-def get_rules_by_condition(rules_df, conditions):
+def get_rules_by_condition(rules, conditions):
     for b_i, value in conditions.items():
-        rules_df = rules_df.loc[(rules_df['rule'].str[b_i] == value) |
-                                (rules_df['rule'].str[b_i] == '*')]
-    return rules_df
+        rules = rules.loc[(rules['rule'].str[b_i] == value) |
+                                (rules['rule'].str[b_i] == '*')]
+    return rules
 
 
-def conditional_entropy(rules_df, conditions=None):
+def conditional_entropy(rules, conditions=None):
     if conditions is not None:
-        rules_df = get_rules_by_condition(rules_df, conditions)
+        rules = get_rules_by_condition(rules, conditions)
     P = [0] * 64
-    total_rule_power = rules_df['rule_power'].sum()
+    total_rule_power = rules['rule_power'].sum()
     for bi in range(0, 64):
         try:
-            P[bi] = (rules_df.loc[(rules_df['rule'].str[bi] == '0'), 'rule_power'].sum() +
-                     rules_df.loc[(rules_df['rule'].str[bi] == '*'), 'rule_power'].sum() / 2) / total_rule_power
+            P[bi] = (rules_df.loc[(rules['rule'].str[bi] == '0'), 'rule_power'].sum() +
+                     rules_df.loc[(rules['rule'].str[bi] == '*'), 'rule_power'].sum() / 2) / total_rule_power
         except ZeroDivisionError:
             P[bi] = 0
 
@@ -60,7 +61,7 @@ def conditional_entropy(rules_df, conditions=None):
             return 0
         return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
 
-    return [entropy(p) for p in P]
+    return [entropy(p) for p in P], rules
 
 
 gains = conditional_entropy(rules_df, {})
@@ -74,9 +75,9 @@ def ip_view(d):
     return ''.join(list(map(lambda k: d[k] if k in d.keys() else '_', range(64))))
 
 
-def add_nodes(last_node, knowledge, which_to_check, to_connect, h):
+def add_nodes(last_node, knowledge, which_to_check, to_connect, h, rules):
 
-    if which_to_check.count(0) == len(which_to_check):
+    if which_to_check.count(0) == len(which_to_check) or h == HIGH:
         return
 
     which_to_check[last_node] = 0
@@ -85,21 +86,21 @@ def add_nodes(last_node, knowledge, which_to_check, to_connect, h):
     prior_knowledge_zero[last_node] = '0'
     prior_knowledge_one[last_node] = '1'
     
-    gain_zero = conditional_entropy(rules_df, prior_knowledge_zero)
+    gain_zero, rules = conditional_entropy(rules, prior_knowledge_zero)
     gain_zero = [a * b for a, b in zip(gain_zero, which_to_check)]
     zero_node = gain_zero.index(max(gain_zero))
-    gain_one = conditional_entropy(rules_df, prior_knowledge_one)
+    gain_one, rules = conditional_entropy(rules, prior_knowledge_one)
     gain_one = [a * b for a, b in zip(gain_one, which_to_check)]
     one_node = gain_one.index(max(gain_one))
 
     zero_node_str = ip_view(prior_knowledge_zero)
     print(zero_node_str)
     zero_edge = (to_connect, zero_node_str)
-    decision_tree.add_edge(*zero_edge)
+    decision_tree.add_edge(*zero_edge, object = "{ " + str(last_node) + " : 0")
     one_node_str = ip_view(prior_knowledge_one)
     print(one_node_str)
     one_edge = (to_connect, one_node_str)
-    decision_tree.add_edge(*one_edge)
+    decision_tree.add_edge(*one_edge, object = "{ " + str(last_node) + " : 1")
 
     add_nodes(zero_node, prior_knowledge_zero.copy(), which_to_check.copy(), zero_node_str, h + 1)
     add_nodes(one_node, prior_knowledge_one.copy(), which_to_check.copy(), one_node_str, h + 1)
@@ -107,8 +108,8 @@ def add_nodes(last_node, knowledge, which_to_check, to_connect, h):
 
 to_check = [1] * 64
 to_check[first_node] = 0
-add_nodes(first_node, {}, to_check, str(first_node), 0)
-add_nodes(first_node, {}, to_check, str(first_node), 0)
+add_nodes(first_node, {}, to_check, str(first_node), 0, rules_df)
+add_nodes(first_node, {}, to_check, str(first_node), 0, rules_df)
 
 
 nx.draw(decision_tree, with_labels=True)
