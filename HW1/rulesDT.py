@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from netaddr import *
 
 NUM_OF_BITS = 64
-HIGH = 16
+GROUP_NUM = 16
 
 rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
                        names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
@@ -75,19 +75,19 @@ def ip_view(d):
     return ''.join(list(map(lambda k: d[k] if k in d.keys() else '_', range(64))))
 
 
-def add_nodes(last_node, knowledge, which_to_check, to_connect, h, rules):
+def add_nodes(last_node, conditions, which_to_check, to_connect, rules):
 
-    if which_to_check.count(0) == len(which_to_check) or h == HIGH:
+    if len(rules) <= GROUP_NUM:
         return
 
-    which_to_check[last_node] = 0
-    prior_knowledge_zero = knowledge.copy()
-    prior_knowledge_one = knowledge.copy()
+    which_to_check[last_node] = 0 #[0,0,0,0,1,1,1,1,1....
+    prior_knowledge_zero = conditions.copy()
+    prior_knowledge_one = conditions.copy()
     prior_knowledge_zero[last_node] = '0'
     prior_knowledge_one[last_node] = '1'
     
     gain_zero, rules = conditional_entropy(rules, prior_knowledge_zero)
-    gain_zero = [a * b for a, b in zip(gain_zero, which_to_check)]
+    gain_zero = [a * b for a, b in zip(gain_zero, which_to_check)] #[0,0,1,1...  gain_zero = [0, 0, 0.7...
     zero_node = gain_zero.index(max(gain_zero))
     gain_one, rules = conditional_entropy(rules, prior_knowledge_one)
     gain_one = [a * b for a, b in zip(gain_one, which_to_check)]
@@ -102,8 +102,8 @@ def add_nodes(last_node, knowledge, which_to_check, to_connect, h, rules):
     one_edge = (to_connect, one_node_str)
     decision_tree.add_edge(*one_edge, object = "{ " + str(last_node) + " : 1")
 
-    add_nodes(zero_node, prior_knowledge_zero.copy(), which_to_check.copy(), zero_node_str, h + 1)
-    add_nodes(one_node, prior_knowledge_one.copy(), which_to_check.copy(), one_node_str, h + 1)
+    add_nodes(zero_node, prior_knowledge_zero.copy(), which_to_check.copy(), zero_node_str, rules)
+    add_nodes(one_node, prior_knowledge_one.copy(), which_to_check.copy(), one_node_str, rules)
 
 
 to_check = [1] * 64
