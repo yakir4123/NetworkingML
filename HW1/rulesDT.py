@@ -12,11 +12,25 @@ from HW1 import utils
 NUM_OF_BITS = 64
 GROUP_NUM = 128
 
-rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
-                       names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
-rules_df = rules_df.loc[:400]
-rules_df = rules_df.drop(columns=['src_port', 'dst_port', 'prot'])
-rules_df['src_ip'] = rules_df['src_ip'].apply(lambda s: s[1:])
+
+def create_rule_table():
+    rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
+                           names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
+    rules_df = rules_df.drop(columns=['src_port', 'dst_port', 'prot'])
+    rules_df['src_ip'] = rules_df['src_ip'].apply(lambda s: s[1:])
+    rules_df['src_ip_rule'] = rules_df['src_ip'].apply(ip_to_rule)
+    rules_df['dst_ip_rule'] = rules_df['dst_ip'].apply(ip_to_rule)
+    rules_df['rule'] = rules_df['src_ip_rule'] + rules_df['dst_ip_rule']
+    for bit in range(0, NUM_OF_BITS):
+        rules_df['b_{}'.format(bit)] = rules_df['rule'].str[bit]
+    rules_df['rule_power'] = rules_df['rule'].apply(rule_power)
+
+    del rules_df['src_ip_rule']
+    del rules_df['dst_ip_rule']
+    del rules_df['rule']
+    gc.collect()
+
+    return rules_df
 
 
 def ip_to_rule(ip_addr):
@@ -31,29 +45,16 @@ def rule_power(rule):
     return 2 ** rule.count('*')
 
 
-# Yakir - process the data
-rules_df['src_ip_rule'] = rules_df['src_ip'].apply(ip_to_rule)
-rules_df['dst_ip_rule'] = rules_df['dst_ip'].apply(ip_to_rule)
-rules_df['rule'] = rules_df['src_ip_rule'] + rules_df['dst_ip_rule']
-rules_df['rule_power'] = rules_df['rule'].apply(rule_power)
-
-del rules_df['src_ip_rule']
-del rules_df['dst_ip_rule']
-gc.collect()
-
-
 def get_rules_by_condition(rules, condition):
-    rules = rules.loc[(rules['rule'].str[condition[0]] == condition[1]) |
-                      (rules['rule'].str[condition[0]] == '*')]
+    bit_col = 'b_{}'.format(condition[0])
+    rules = rules.loc[(rules[bit_col] == condition[1]) | (rules[bit_col] == '*')]
     return rules
 
 
 def set_rule_wildcards_bit(rules, condition):
-    rules.loc[(rules['rule'].str[condition[0]] == '*'), 'rule_power'] //= 2
-    rules.loc[(rules['rule'].str[condition[0]] == '*'), 'rule'] =\
-        rules.loc[(rules['rule'].str[condition[0]] == '*'), 'rule'].str[:condition[0]]\
-        + condition[1]\
-        + rules.loc[(rules['rule'].str[condition[0]] == '*'), 'rule'].str[condition[0]+1:]
+    bit_col = 'b_{}'.format(condition[0])
+    rules.loc[(rules[bit_col] == '*'), 'rule_power'] //= 2
+    rules.loc[(rules[bit_col] == '*'), bit_col] = condition[1]
     return rules
 
 
@@ -62,10 +63,11 @@ def conditional_entropy(rules, conditions=None):
         rules = get_rules_by_condition(rules, conditions)
     P = [0] * 64
     total_rule_power = rules['rule_power'].sum()
-    for bi in range(0, 64):
+    for bi in range(0, NUM_OF_BITS):
         try:
-            P[bi] = (rules.loc[(rules['rule'].str[bi] == '0'), 'rule_power'].sum() +
-                     rules.loc[(rules['rule'].str[bi] == '*'), 'rule_power'].sum() / 2) / total_rule_power
+            bit_col = 'b_{}'.format(bi)
+            P[bi] = (rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum() +
+                     rules.loc[(rules[bit_col] == '*'), 'rule_power'].sum() / 2) / total_rule_power
         except ZeroDivisionError:
             P[bi] = 0
 
@@ -79,8 +81,6 @@ def conditional_entropy(rules, conditions=None):
 
 
 node_counter = 0
-
-
 def node_name(tup):
     global node_counter
     node_counter += 1
@@ -88,7 +88,7 @@ def node_name(tup):
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
 
-def add_nodes(last_node, which_to_check, to_connect, rules):
+def add_nodes(last_node, which_to_check, to_connect, rules, decision_tree):
     if len(rules) <= GROUP_NUM:
         return
 
@@ -112,22 +112,26 @@ def add_nodes(last_node, which_to_check, to_connect, rules):
     one_edge = (to_connect, one_node_str)
     decision_tree.add_edge(*one_edge, object="{ " + str(last_node) + " : 1")
 
-    add_nodes(zero_node, which_to_check.copy(), zero_node_str, rules_zero)
-    add_nodes(one_node, which_to_check.copy(), one_node_str, rules_one)
+    add_nodes(zero_node, which_to_check.copy(), zero_node_str, rules_zero, decision_tree)
+    add_nodes(one_node, which_to_check.copy(), one_node_str, rules_one, decision_tree)
 
 
-start_time = time.time()
-gains, _ = conditional_entropy(rules_df)
-decision_tree = nx.Graph()
-first_node = gains.index(min(gains))
-decision_tree.add_node(str(first_node))
+def main():
+    start_time = time.time()
+    rules_df = create_rule_table()
+    gains, _ = conditional_entropy(rules_df)
+    decision_tree = nx.Graph()
+    first_node = gains.index(min(gains))
+    decision_tree.add_node(str(first_node))
 
-to_check = [1] * 64
-add_nodes(first_node, to_check, str(first_node), rules_df)
+    to_check = [1] * 64
+    add_nodes(first_node, to_check, str(first_node), rules_df, decision_tree)
 
-pos = utils.hierarchy_pos(decision_tree, 1)
-nx.draw(decision_tree, pos, with_labels=True)
+    pos = utils.hierarchy_pos(decision_tree, 1)
+    nx.draw(decision_tree, pos, with_labels=True)
 
-nx.write_adjlist(decision_tree, "decision_tree_{}".format(GROUP_NUM))
-plt.show()
-print("--- %s seconds ---" % (time.time() - start_time))
+    nx.write_adjlist(decision_tree, "decision_tree_{}".format(GROUP_NUM))
+    plt.show()
+    print("--- %s seconds ---" % (time.time() - start_time))
+
+main()
