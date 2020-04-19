@@ -10,7 +10,7 @@ from netaddr import *
 from HW1 import utils
 
 NUM_OF_BITS = 64
-GROUP_NUM = 128
+GROUP_NUM = 16
 
 
 def create_rule_table():
@@ -26,7 +26,9 @@ def create_rule_table():
     rules_df['rule_power'] = rules_df['rule'].apply(rule_power)
 
     del rules_df['src_ip_rule']
+    del rules_df['src_ip']
     del rules_df['dst_ip_rule']
+    del rules_df['dst_ip']
     del rules_df['rule']
     gc.collect()
 
@@ -89,7 +91,7 @@ def node_name(tup):
 
 
 def add_nodes(last_node, which_to_check, to_connect, rules, decision_tree):
-    if len(rules) <= GROUP_NUM:
+    if len(rules) <= GROUP_NUM or all([bit == 0 for bit in which_to_check]):
         return
 
     which_to_check[last_node] = 0  # [0,0,0,0,1,1,1,1,1....
@@ -97,18 +99,24 @@ def add_nodes(last_node, which_to_check, to_connect, rules, decision_tree):
     prior_knowledge_one = (last_node, '1')
 
     gain_zero, rules_zero = conditional_entropy(rules, prior_knowledge_zero)
-    gain_zero = [-a * b for a, b in zip(gain_zero, which_to_check)]  # [0,0,1,1...  gain_zero = [0, 0, 0.7...
+    gain_zero = [2 if b == 0 else a for a, b in zip(gain_zero, which_to_check)]  # [0,0,1,1...  gain_zero = [0, 0, 0.7...
     zero_node = gain_zero.index(min(gain_zero))
-    gain_one, rules_one = conditional_entropy(rules, prior_knowledge_one)
-    gain_one = [-a * b for a, b in zip(gain_one, which_to_check)]
+    gain_one, rules_one = conditional_entropy (rules, prior_knowledge_one)
+    gain_one = [2 if b == 0 else a for a, b in zip(gain_one, which_to_check)]
     one_node = gain_one.index(min(gain_one))
 
+    print("===========")
+    print("base group:" + str(len(rules)))
+    print("left tree :" + str(len(rules_zero)))
+    print("right tree:" + str(len(rules_one)))
+    # we dont need the table after we split it to 2
+    del rules
+    gc.collect()
+
     zero_node_str = node_name(prior_knowledge_zero)
-    print(zero_node_str)
     zero_edge = (to_connect, zero_node_str)
     decision_tree.add_edge(*zero_edge, object="{ " + str(last_node) + " : 0")
     one_node_str = node_name(prior_knowledge_one)
-    print(one_node_str)
     one_edge = (to_connect, one_node_str)
     decision_tree.add_edge(*one_edge, object="{ " + str(last_node) + " : 1")
 
@@ -133,5 +141,6 @@ def main():
     nx.write_adjlist(decision_tree, "decision_tree_{}".format(GROUP_NUM))
     plt.show()
     print("--- %s seconds ---" % (time.time() - start_time))
+
 
 main()
