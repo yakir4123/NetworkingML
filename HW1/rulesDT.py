@@ -1,16 +1,17 @@
 import gc
 import math
 import time
+import numpy as np
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 
 from netaddr import *
-
 from HW1 import utils
 
 NUM_OF_BITS = 64
-GROUP_NUM = 16
+GROUP_NUM = 128
+IS_BEST_BIT = True
 
 
 def create_rule_table():
@@ -49,7 +50,7 @@ def rule_power(rule):
 
 def get_rules_by_condition(rules, condition):
     bit_col = 'b_{}'.format(condition[0])
-    rules = rules.loc[(rules[bit_col] == condition[1]) | (rules[bit_col] == '*')]
+    rules = rules.loc[(rules[bit_col] == condition[1]) | (rules[bit_col] == '*')].copy()
     return rules
 
 
@@ -90,38 +91,62 @@ def node_name(tup):
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
 
-def add_nodes(last_node, which_to_check, to_connect, rules, decision_tree):
-    if len(rules) <= GROUP_NUM or all([bit == 0 for bit in which_to_check]):
+def best_bit_by_IG(sub_group_rules, prior_knowledge_zero, which_to_check, *args):
+    entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)
+    entropy = [2 if b == 0 else a for a, b in
+                    zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+    best_bit = entropy.index(min(entropy))
+    return best_bit, rules
+
+
+def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
+    entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+    best_bit = entropy.index(max(entropy))
+    return best_bit, rules
+
+
+def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria, all_rules=None, sub_group_rules=None):
+
+    if len(sub_group_rules) <= GROUP_NUM or sum(which_to_check) == 1:
         return
 
-    which_to_check[last_node] = 0  # [0,0,0,0,1,1,1,1,1....
-    prior_knowledge_zero = (last_node, '0')
-    prior_knowledge_one = (last_node, '1')
+    which_to_check[last_best_bit] = 0  # [0,0,0,0,1,1,1,1,1....
+    prior_knowledge_zero = (last_best_bit, '0')
+    prior_knowledge_one = (last_best_bit, '1')
 
-    gain_zero, rules_zero = conditional_entropy(rules, prior_knowledge_zero)
-    gain_zero = [2 if b == 0 else a for a, b in zip(gain_zero, which_to_check)]  # [0,0,1,1...  gain_zero = [0, 0, 0.7...
-    zero_node = gain_zero.index(min(gain_zero))
-    gain_one, rules_one = conditional_entropy (rules, prior_knowledge_one)
-    gain_one = [2 if b == 0 else a for a, b in zip(gain_one, which_to_check)]
-    one_node = gain_one.index(min(gain_one))
+    if IS_BEST_BIT:
+        best_zero_bit, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
+        best_one_bit, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
+    else:
+        entropy, _ = np.array(conditional_entropy(all_rules))
+        level = which_to_check.count(0)
+        sorted_entropy = entropy.copy()
+        sorted_entropy.sort()
+        entropy = [2 if b == 0 else a for a, b in zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+        best_bit = entropy.index(sorted_entropy[level])
 
+        _, rules_zero = conditional_entropy(sub_group_rules, prior_knowledge_zero)
+        _, rules_one = conditional_entropy(sub_group_rules, prior_knowledge_one)
+        # to have one code for both cases simply "duplicate" the values for both trees
+        best_zero_bit = best_bit
+        best_one_bit = best_bit
     print("===========")
-    print("base group:" + str(len(rules)))
+    print("base group:" + str(len(sub_group_rules)))
     print("left tree :" + str(len(rules_zero)))
     print("right tree:" + str(len(rules_one)))
+
     # we dont need the table after we split it to 2
-    del rules
-    gc.collect()
+    # gc.collect()
 
     zero_node_str = node_name(prior_knowledge_zero)
     zero_edge = (to_connect, zero_node_str)
-    decision_tree.add_edge(*zero_edge, object="{ " + str(last_node) + " : 0")
+    decision_tree.add_edge(*zero_edge, object="{ " + str(last_best_bit) + " : 0")
     one_node_str = node_name(prior_knowledge_one)
     one_edge = (to_connect, one_node_str)
-    decision_tree.add_edge(*one_edge, object="{ " + str(last_node) + " : 1")
+    decision_tree.add_edge(*one_edge, object="{ " + str(last_best_bit) + " : 1")
 
-    add_nodes(zero_node, which_to_check.copy(), zero_node_str, rules_zero, decision_tree)
-    add_nodes(one_node, which_to_check.copy(), one_node_str, rules_one, decision_tree)
+    add_nodes(best_zero_bit, which_to_check.copy(), zero_node_str, decision_tree, criteria, all_rules, rules_zero)
+    add_nodes(best_one_bit, which_to_check.copy(), one_node_str, decision_tree, criteria, all_rules, rules_one)
 
 
 def main():
@@ -133,12 +158,13 @@ def main():
     decision_tree.add_node(str(first_node))
 
     to_check = [1] * 64
-    add_nodes(first_node, to_check, str(first_node), rules_df, decision_tree)
+    add_nodes(first_node, to_check, str(first_node), decision_tree, best_bit_by_entropy, rules_df, rules_df)
 
+    nx.write_adjlist(decision_tree, "decision_tree_{BestBit}BB_{SIZE}".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
+    
     pos = utils.hierarchy_pos(decision_tree, 1)
     nx.draw(decision_tree, pos, with_labels=True)
 
-    nx.write_adjlist(decision_tree, "decision_tree_{}".format(GROUP_NUM))
     plt.show()
     print("--- %s seconds ---" % (time.time() - start_time))
 
