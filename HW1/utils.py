@@ -33,8 +33,6 @@ def create_rule_table():
 def ip_to_rule(ip_addr):
     ip_addr = ipaddress.ip_network(ip_addr)
     ip2bin = f'{int(ip_addr.network_address):032b}'
-    # ip2bin = "".join(map(str, ["{0:08b}".format(int(x))
-    #                            for x in str(ip_addr.network_address).split(".")]))
     res = ip2bin[:ip_addr.prefixlen] + ((32 - ip_addr.prefixlen) * "*")
     return res
 
@@ -98,6 +96,7 @@ def create_packet_table(num_packets):
     packet_df = pd.read_csv('ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
                             names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot', 'rule'])
     packet_df = packet_df.drop(columns=['src_port', 'dst_port', 'prot'])
+    packer_df = packet_df.loc[:num_packets]
     packet_df['src_ip_bits'] = packet_df['src_ip'].apply(ip_to_rule)
     packet_df['dst_ip_bits'] = packet_df['dst_ip'].apply(ip_to_rule)
     packet_df['src_dst_ip_bits'] = packet_df['src_ip_bits'] + packet_df['dst_ip_bits']
@@ -113,7 +112,7 @@ def create_packet_table(num_packets):
     del packet_df['src_dst_ip_bits']
     gc.collect()
 
-    return packet_df.loc[:num_packets]
+    return packet_df
 
 
 def reduce_mem_usage(df):

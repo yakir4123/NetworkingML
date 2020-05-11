@@ -39,7 +39,7 @@ def plot(decision_tree, save_file_path):
 
 
 def main():
-    groups = [128, 96, 64, 32]
+    groups = [128]
     # exercise1_3_1(groups)
     # exercise1_3_2(groups)
     # exercise2(groups)
