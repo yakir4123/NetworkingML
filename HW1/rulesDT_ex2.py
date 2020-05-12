@@ -64,52 +64,53 @@ def set_rule_wildcards_bit(rules, condition):
 def conditional_entropy(rules, conditions=None):
     if conditions is not None:
         rules = get_rules_by_condition(rules, conditions)
-    P = [0] * 64
-    total_rule_power = rules['rule_power'].sum()
+    P = [1] * 64
+
     for bi in range(0, NUM_OF_BITS):
         try:
             bit_col = 'b_{}'.format(bi)
-            P[bi] = (rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum() +
-                     rules.loc[(rules[bit_col] == '*'), 'rule_power'].sum() / 2) / total_rule_power
+            num_of_zeros = rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum()
+            total = rules.loc[(rules[bit_col] == '1'), 'rule_power'].sum() + num_of_zeros
+            P[bi] = num_of_zeros / total
+
         except ZeroDivisionError:
-            P[bi] = 0
+            P[bi] = 1
 
     def entropy(p):
-        if p == 1 or p == 0:
-            return 0
-        return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
-
+        try:
+            return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
+        except:
+            return 1
+        
     if conditions is not None:
         rules = set_rule_wildcards_bit(rules, conditions)
     return [entropy(p) for p in P], rules
 
 
 node_counter = 0
-
-
 def node_name(tup):
     global node_counter
     node_counter += 1
-    return '{node_counter}:b_{i}={val}' \
+    return '{node_counter}:b_{i}={val}'\
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
 
 def best_bit_by_IG(sub_group_rules, prior_knowledge_zero, which_to_check, *args):
     entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)
     entropy = [2 if b == 0 else a for a, b in
-               zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+                    zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
     best_bit = entropy.index(min(entropy))
     return best_bit, rules
 
 
 def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
-    entropy, rules = conditional_entropy(sub_group_rules,
-                                         prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
-    best_bit = entropy.index(max(entropy))
+    entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+    best_bit = entropy.index(min(entropy))
     return best_bit, rules
 
 
 def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria, all_rules=None, sub_group_rules=None):
+
     if len(sub_group_rules) <= GROUP_NUM or sum(which_to_check) == 1:
         return
 
@@ -125,8 +126,7 @@ def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria
         level = which_to_check.count(0)
         sorted_entropy = entropy.copy()
         sorted_entropy.sort()
-        entropy = [2 if b == 0 else a for a, b in
-                   zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+        entropy = [2 if b == 0 else a for a, b in zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
         best_bit = entropy.index(sorted_entropy[level])
 
         _, rules_zero = conditional_entropy(sub_group_rules, prior_knowledge_zero)
@@ -164,12 +164,11 @@ def main():
     to_check = [1] * 64
     add_nodes(first_node, to_check, str(first_node), decision_tree, best_bit_by_entropy, rules_df, rules_df)
 
-    nx.write_adjlist(decision_tree,
-                     "decision_tree_{BestBit}BB_{SIZE}".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
-
+    # nx.write_adjlist(decision_tree, "decision_tree_{BestBit}BB_{SIZE}".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
+    
     pos = utils.hierarchy_pos(decision_tree, 1)
-    nx.draw(decision_tree, pos, with_labels=True)
-
+    nx.draw(decision_tree, pos, with_labels=True, node_size=40, font_size=6)
+    plt.savefig("plot.pdf")
     plt.show()
     print("--- %s seconds ---" % (time.time() - start_time))
 
