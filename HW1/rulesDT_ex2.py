@@ -12,7 +12,7 @@ from HW1 import utils
 NUM_OF_BITS = 64
 GROUP_NUM = 128
 IS_BEST_BIT = True
-
+gains = []
 
 def create_rule_table():
     rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
@@ -64,7 +64,7 @@ def set_rule_wildcards_bit(rules, condition):
 def conditional_entropy(rules, conditions=None):
     if conditions is not None:
         rules = get_rules_by_condition(rules, conditions)
-    P = [1] * 64
+    P = [0] * 64
 
     for bi in range(0, NUM_OF_BITS):
         try:
@@ -72,45 +72,45 @@ def conditional_entropy(rules, conditions=None):
             num_of_zeros = rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum()
             total = rules.loc[(rules[bit_col] == '1'), 'rule_power'].sum() + num_of_zeros
             P[bi] = num_of_zeros / total
-
         except ZeroDivisionError:
-            P[bi] = 1
+            P[bi] = 0
 
     def entropy(p):
-        try:
-            return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
-        except:
-            return 1
-        
+        if p == 1 or p == 0:
+            return 0
+        return -p * math.log(p, 2) - (1 - p) * math.log(1 - p, 2)
+
     if conditions is not None:
         rules = set_rule_wildcards_bit(rules, conditions)
     return [entropy(p) for p in P], rules
 
 
 node_counter = 0
+
+
 def node_name(tup):
     global node_counter
     node_counter += 1
-    return '{node_counter}:b_{i}={val}'\
+    return '{node_counter}:b_{i}={val}' \
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
 
 def best_bit_by_IG(sub_group_rules, prior_knowledge_zero, which_to_check, *args):
     entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)
     entropy = [2 if b == 0 else a for a, b in
-                    zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+               zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
     best_bit = entropy.index(min(entropy))
     return best_bit, rules
 
 
 def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
-    entropy, rules = conditional_entropy(sub_group_rules, prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
-    best_bit = entropy.index(min(entropy))
+    entropy, rules = conditional_entropy(sub_group_rules,
+                                         prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+    best_bit = entropy.index(max(entropy))
     return best_bit, rules
 
 
 def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria, all_rules=None, sub_group_rules=None):
-
     if len(sub_group_rules) <= GROUP_NUM or sum(which_to_check) == 1:
         return
 
@@ -118,22 +118,9 @@ def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria
     prior_knowledge_zero = (last_best_bit, '0')
     prior_knowledge_one = (last_best_bit, '1')
 
-    if IS_BEST_BIT:
-        best_zero_bit, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
-        best_one_bit, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
-    else:
-        entropy, _ = np.array(conditional_entropy(all_rules))
-        level = which_to_check.count(0)
-        sorted_entropy = entropy.copy()
-        sorted_entropy.sort()
-        entropy = [2 if b == 0 else a for a, b in zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
-        best_bit = entropy.index(sorted_entropy[level])
+    _, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
+    _, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
 
-        _, rules_zero = conditional_entropy(sub_group_rules, prior_knowledge_zero)
-        _, rules_one = conditional_entropy(sub_group_rules, prior_knowledge_one)
-        # to have one code for both cases simply "duplicate" the values for both trees
-        best_zero_bit = best_bit
-        best_one_bit = best_bit
     print("===========")
     print("base group:" + str(len(sub_group_rules)))
     print("left tree :" + str(len(rules_zero)))
@@ -149,26 +136,39 @@ def add_nodes(last_best_bit, which_to_check, to_connect, decision_tree, criteria
     one_edge = (to_connect, one_node_str)
     decision_tree.add_edge(*one_edge, object="{ " + str(last_best_bit) + " : 1")
 
-    add_nodes(best_zero_bit, which_to_check.copy(), zero_node_str, decision_tree, criteria, all_rules, rules_zero)
-    add_nodes(best_one_bit, which_to_check.copy(), one_node_str, decision_tree, criteria, all_rules, rules_one)
+    global gains
+    to_check = [float(gains[i] * which_to_check[i]) for i in range(64)]
+    best_bit = to_check.index(max(to_check))
+
+    add_nodes(best_bit, which_to_check.copy(), zero_node_str, decision_tree, criteria, all_rules, rules_zero)
+    add_nodes(best_bit, which_to_check.copy(), one_node_str, decision_tree, criteria, all_rules, rules_one)
 
 
 def main():
+    global gains
+
     start_time = time.time()
     rules_df = create_rule_table()
     gains, _ = conditional_entropy(rules_df)
     decision_tree = nx.Graph()
-    first_node = gains.index(min(gains))
+    first_node = gains.index(max(gains))
     decision_tree.add_node(str(first_node))
 
     to_check = [1] * 64
     add_nodes(first_node, to_check, str(first_node), decision_tree, best_bit_by_entropy, rules_df, rules_df)
 
-    # nx.write_adjlist(decision_tree, "decision_tree_{BestBit}BB_{SIZE}".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
-    
+    nx.write_adjlist(decision_tree,
+                     "decision_tree_{BestBit}BB_{SIZE}".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
+
     pos = utils.hierarchy_pos(decision_tree, 1)
     nx.draw(decision_tree, pos, with_labels=True, node_size=40, font_size=6)
-    plt.savefig("plot.pdf")
+    # plt.savefig("decision_tree_{BestBit}BB_{SIZE}.pdf".format(SIZE=GROUP_NUM, BestBit="" if IS_BEST_BIT else "Non"))
+    plt.show()
+    print("--- %s seconds ---" % (time.time() - start_time))
+
+    pos = utils.hierarchy_pos(decision_tree, 1)
+    nx.draw(decision_tree, pos, with_labels=True)
+
     plt.show()
     print("--- %s seconds ---" % (time.time() - start_time))
 
