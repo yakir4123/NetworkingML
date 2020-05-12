@@ -12,9 +12,12 @@ node_counter = 0
 def node_name(tup):
     global node_counter
     node_counter += 1
-    return '{node_counter}:b_{i}={val}' \
+    return '{node_counter}:(b{i}=={val}) ' \
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
+
+# def node_name(tup):
+#     return '(b{i}=={val}) '.format(i=tup[0], val=tup[1])
 
 def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_tree, criteria=None, all_rules=None,
               sub_group_rules=None):
@@ -65,14 +68,14 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
 
 def create_decision_tree(rules_df, min_group_count, criteria):
     gains, _ = conditional_entropy(rules_df)
-    decision_tree = nx.Graph()
+    decision_tree = nx.DiGraph()
     to_check = [1] * 64
     if criteria is not None:
         first_node, _ = criteria(rules_df, None, to_check)
     else:
         first_node, _ = utils.best_bit_by_IG(rules_df, None, to_check)
-    decision_tree.add_node(str(first_node))
-    add_nodes(min_group_count, first_node, to_check, str(first_node), decision_tree, criteria, rules_df, rules_df)
+    decision_tree.add_node("root")
+    add_nodes(min_group_count, first_node, to_check, "root", decision_tree, criteria, rules_df, rules_df)
 
     return decision_tree
 

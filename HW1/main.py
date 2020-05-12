@@ -34,14 +34,18 @@ def exercise4():
 
 def plot(decision_tree, save_file_path):
     nx.write_adjlist(decision_tree, save_file_path)
+    with open(save_file_path + ".log", "w") as logger:
+        logger.write("Number of nodes: {}".format(decision_tree.number_of_nodes()) + "\n")
+        logger.write("Max depth: {}".format(nx.algorithms.dag.dag_longest_path_length(decision_tree)) + "\n")
+        logger.write("longest path: {}".format(nx.algorithms.dag.dag_longest_path(decision_tree)) + "\n")
     nx.draw(decision_tree, with_labels=True)
     plt.show()
 
 
 def main():
-    groups = [128]
+    groups = [128, 96, 64, 32, 16]
     # exercise1_3_1(groups)
     # exercise1_3_2(groups)
-    # exercise2(groups)
-    exercise4()
+    exercise2(groups)
+    # exercise4()
 
