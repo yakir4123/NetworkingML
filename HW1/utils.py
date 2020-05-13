@@ -2,6 +2,7 @@ import gc
 import math
 import numpy as np
 import pandas as pd
+import networkx as nx
 
 import ipaddress
 
@@ -45,12 +46,13 @@ def conditional_entropy(rules, conditions=None):
     if conditions is not None:
         rules = get_rules_by_condition(rules, conditions)
     P = [0] * 64
-    total_rule_power = rules['rule_power'].sum()
+
     for bi in range(0, NUM_OF_BITS):
         try:
             bit_col = 'b_{}'.format(bi)
-            P[bi] = (rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum() +
-                     rules.loc[(rules[bit_col] == '*'), 'rule_power'].sum() / 2) / total_rule_power
+            ones = len(rules.loc[(rules[bit_col] == '1')])
+            zeros = len(rules.loc[(rules[bit_col] == '0')])
+            P[bi] = zeros / (zeros + ones)
         except ZeroDivisionError:
             P[bi] = 0
 
@@ -89,7 +91,7 @@ def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
     entropy, rules = conditional_entropy(sub_group_rules,
                                          prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
     best_bit = entropy.index(max(entropy))
-    return best_bit, rules
+    return best_bit, rules, entropy
 
 
 def create_packet_table(num_packets):
@@ -177,3 +179,56 @@ def reduce_mem_usage(df):
     print("Memory usage is: ", mem_usg, " MB")
     print("This is ", 100 * mem_usg / start_mem_usg, "% of the initial size")
     return df, NAlist
+
+
+def create_tree():
+
+    rules_df = create_rule_table()
+    gains, rules = conditional_entropy(rules_df)
+    decision_tree = nx.Graph()
+    first_node = gains.index(max(gains))
+    decision_tree.add_node(str(first_node))
+    level = [first_node]
+    rules = [rules]
+    nodes_names = [first_node]
+    best_bit = first_node
+    which_to_check = [1] * 64
+    which_to_check[first_node] = 0
+    print("first bit: " + str(best_bit))
+    print("rule_len: " + str(len(rules[0])))
+
+    while(True):
+
+        gains_compare = []
+        best_index = []
+        next_rules = []
+        condition_zero = (best_bit, '0')
+        condition_one = (best_bit, '1')
+        next_nodes = []
+
+        for node in level:
+
+            _, rules_zero, max_gain_zero = best_bit_by_entropy(rules[0], condition_zero)
+            _, rules_one, max_gain_one = best_bit_by_entropy(rules.pop(-1), condition_one)
+            print('len of rules_zero :' + str(len(rules_zero)))
+            print('len of rules_one :' + str(len(rules_one)))
+
+            gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
+            max_zero = max(gains_to_check_zero)
+            zero_index = gains_to_check_zero.index(max_zero)
+            gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
+            max_one = max(gains_to_check_one)
+            one_index = gains_to_check_one.index(max_one)
+
+            next_rules += [rules_zero, rules_one]
+            gains_compare += [max_zero, max_one]
+            best_index += [zero_index, one_index]
+
+        max_gain_index = gains_compare.index(max(gains_compare))
+        best_bit = best_index[max_gain_index]
+        print("best bit: " + str(best_bit))
+        which_to_check[best_bit] = 0
+        level = [best_bit] * len(gains_compare)
+        rules = next_rules
+
+create_tree()
