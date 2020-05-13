@@ -29,27 +29,19 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
     which_to_check[last_best_bit] = 0  # [0,0,0,0,1,1,1,1,1....
     prior_knowledge_zero = (last_best_bit, '0')
     prior_knowledge_one = (last_best_bit, '1')
-
-    if criteria is not None:
+    try:
         best_zero_bit, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
         best_one_bit, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
-        logging.info("base group:" + str(len(sub_group_rules)))
-        logging.info("left tree :" + str(len(rules_zero)))
-        logging.info("right tree:" + str(len(rules_one)))
-    else:
-        entropy, _ = np.array(conditional_entropy(all_rules))
-        level = which_to_check.count(0)
-        sorted_entropy = entropy.copy()
-        sorted_entropy.sort()
-        entropy = [2 if b == 0 else a for a, b in
-                   zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
-        best_bit = entropy.index(sorted_entropy[level])
+    except Exception as e:
+        logging.info("sub group size is " + str(len(sub_group_rules)) + ", its greater than " + str(group_count)
+                     + " but all bits known.")
+        logging.info("sub_group_rules: ")
+        logging.info(str(sub_group_rules['rule_number'].index))
+        return
 
-        _, rules_zero = conditional_entropy(sub_group_rules, prior_knowledge_zero)
-        _, rules_one = conditional_entropy(sub_group_rules, prior_knowledge_one)
-        # to have one code for both cases simply "duplicate" the values for both trees
-        best_zero_bit = best_bit
-        best_one_bit = best_bit
+    logging.info("base group:" + str(len(sub_group_rules)))
+    logging.info("left tree :" + str(len(rules_zero)))
+    logging.info("right tree:" + str(len(rules_one)))
     print("===========")
     print("base group:" + str(len(sub_group_rules)))
     print("left tree :" + str(len(rules_zero)))
@@ -75,14 +67,11 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
 
 
 def create_decision_tree(rules_df, min_group_count, criteria):
-    gains, _ = conditional_entropy(rules_df)
+    gains, _ = conditional_entropy(rules_df, include_wc=(criteria is utils.best_bit_by_IG))
     logging.info("first bit gains: " + str(gains))
     decision_tree = nx.DiGraph()
     to_check = [1] * 64
-    if criteria is not None:
-        first_node, _ = criteria(rules_df, None, to_check)
-    else:
-        first_node, _ = utils.best_bit_by_IG(rules_df, None, to_check)
+    first_node, _ = criteria(rules_df, None, to_check)
     logging.info("root node " + str(first_node))
     decision_tree.add_node("root")
     add_nodes(min_group_count, first_node, to_check, "root", decision_tree, criteria, rules_df, rules_df)

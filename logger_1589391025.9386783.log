@@ -1,0 +1,2839 @@
+05/13/2020 08:30:26:: first bit gains: [0.9821301814337599, 0.9821301814337599, 0.9821301814337599, 0, 0, 0, 0.014423009534771686, 0.9827232633014499, 0.9816856825905067, 0.014472403908905905, 0, 0.9816856825905066, 0.9816856825905067, 0.9822885970947288, 0.9822885970947288, 0.9822885970947288, 0.9816856825905067, 0.9822885970947288, 0, 0.014472403908906268, 0, 0, 0, 0, 0.6395642008152442, 0.46474048968982906, 0.9932035659732628, 0.9917218323690651, 0.930586129131993, 0.9450448249081256, 0.7905531029514323, 0.9169567260822411, 0.99760611375511, 0.9997552075637235, 0.61838028643971, 0.9518204087005135, 0.9803531419522613, 0.9829971954100503, 0.9964351129905729, 0.6904285855304167, 0.9997718505698612, 0.5865984788473576, 0.3547467068195635, 0.9972646717857067, 0.9972646717857067, 0.9999510007759932, 0.9989326546260582, 0.9957038559877689, 0.9668403305456928, 0.776504213600988, 0.9840304711717017, 0.9296343371787996, 0.9909745836784183, 0.9922958320844479, 0.9527086261519159, 0.9996532977557252, 0.9359182260980337, 0.8982350806947923, 0.9946286080842497, 0.984006933500057, 0.7477570322984546, 0.9799478406131054, 0.9585780870901026, 0.9918752240921827]
+05/13/2020 08:30:26:: root node 45
+05/13/2020 08:30:26:: base group:771
+05/13/2020 08:30:26:: left tree :410
+05/13/2020 08:30:26:: right tree:404
+05/13/2020 08:30:26:: zero node name: 1:(b45==0) 
+05/13/2020 08:30:26:: one node name: 2:(b45==1) 
+05/13/2020 08:30:26:: add childs
+05/13/2020 08:30:26:: base group:410
+05/13/2020 08:30:26:: left tree :279
+05/13/2020 08:30:26:: right tree:265
+05/13/2020 08:30:26:: zero node name: 3:(b57==0) 
+05/13/2020 08:30:26:: one node name: 4:(b57==1) 
+05/13/2020 08:30:26:: add childs
+05/13/2020 08:30:26:: base group:279
+05/13/2020 08:30:26:: left tree :190
+05/13/2020 08:30:26:: right tree:176
+05/13/2020 08:30:26:: zero node name: 5:(b27==0) 
+05/13/2020 08:30:26:: one node name: 6:(b27==1) 
+05/13/2020 08:30:26:: add childs
+05/13/2020 08:30:26:: base group:190
+05/13/2020 08:30:26:: left tree :95
+05/13/2020 08:30:26:: right tree:102
+05/13/2020 08:30:26:: zero node name: 7:(b7==0) 
+05/13/2020 08:30:26:: one node name: 8:(b7==1) 
+05/13/2020 08:30:26:: add childs
+05/13/2020 08:30:27:: base group:95
+05/13/2020 08:30:27:: left tree :85
+05/13/2020 08:30:27:: right tree:58
+05/13/2020 08:30:27:: zero node name: 9:(b59==0) 
+05/13/2020 08:30:27:: one node name: 10:(b59==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:85
+05/13/2020 08:30:27:: left tree :76
+05/13/2020 08:30:27:: right tree:44
+05/13/2020 08:30:27:: zero node name: 11:(b29==0) 
+05/13/2020 08:30:27:: one node name: 12:(b29==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:76
+05/13/2020 08:30:27:: left tree :71
+05/13/2020 08:30:27:: right tree:42
+05/13/2020 08:30:27:: zero node name: 13:(b30==0) 
+05/13/2020 08:30:27:: one node name: 14:(b30==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:71
+05/13/2020 08:30:27:: left tree :63
+05/13/2020 08:30:27:: right tree:15
+05/13/2020 08:30:27:: zero node name: 15:(b33==0) 
+05/13/2020 08:30:27:: one node name: 16:(b33==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:63
+05/13/2020 08:30:27:: left tree :58
+05/13/2020 08:30:27:: right tree:16
+05/13/2020 08:30:27:: zero node name: 17:(b37==0) 
+05/13/2020 08:30:27:: one node name: 18:(b37==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:58
+05/13/2020 08:30:27:: left tree :54
+05/13/2020 08:30:27:: right tree:18
+05/13/2020 08:30:27:: zero node name: 19:(b53==0) 
+05/13/2020 08:30:27:: one node name: 20:(b53==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:27:: base group:54
+05/13/2020 08:30:27:: left tree :51
+05/13/2020 08:30:27:: right tree:24
+05/13/2020 08:30:27:: zero node name: 21:(b62==0) 
+05/13/2020 08:30:27:: one node name: 22:(b62==1) 
+05/13/2020 08:30:27:: add childs
+05/13/2020 08:30:28:: base group:51
+05/13/2020 08:30:28:: left tree :48
+05/13/2020 08:30:28:: right tree:19
+05/13/2020 08:30:28:: zero node name: 23:(b55==0) 
+05/13/2020 08:30:28:: one node name: 24:(b55==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: base group:48
+05/13/2020 08:30:28:: left tree :45
+05/13/2020 08:30:28:: right tree:15
+05/13/2020 08:30:28:: zero node name: 25:(b46==0) 
+05/13/2020 08:30:28:: one node name: 26:(b46==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: base group:45
+05/13/2020 08:30:28:: left tree :44
+05/13/2020 08:30:28:: right tree:15
+05/13/2020 08:30:28:: zero node name: 27:(b61==0) 
+05/13/2020 08:30:28:: one node name: 28:(b61==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: base group:44
+05/13/2020 08:30:28:: left tree :14
+05/13/2020 08:30:28:: right tree:43
+05/13/2020 08:30:28:: zero node name: 29:(b56==0) 
+05/13/2020 08:30:28:: one node name: 30:(b56==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: sub group size is 14, smaller than 32
+05/13/2020 08:30:28:: sub_group_rules: 
+05/13/2020 08:30:28:: Int64Index([702, 707, 733, 739, 742, 744, 752, 753, 756, 759, 767, 768, 769,
+            770],
+           dtype='int64')
+05/13/2020 08:30:28:: base group:43
+05/13/2020 08:30:28:: left tree :42
+05/13/2020 08:30:28:: right tree:13
+05/13/2020 08:30:28:: zero node name: 31:(b47==0) 
+05/13/2020 08:30:28:: one node name: 32:(b47==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: base group:42
+05/13/2020 08:30:28:: left tree :41
+05/13/2020 08:30:28:: right tree:12
+05/13/2020 08:30:28:: zero node name: 33:(b38==0) 
+05/13/2020 08:30:28:: one node name: 34:(b38==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: base group:41
+05/13/2020 08:30:28:: left tree :11
+05/13/2020 08:30:28:: right tree:40
+05/13/2020 08:30:28:: zero node name: 35:(b36==0) 
+05/13/2020 08:30:28:: one node name: 36:(b36==1) 
+05/13/2020 08:30:28:: add childs
+05/13/2020 08:30:28:: sub group size is 11, smaller than 32
+05/13/2020 08:30:28:: sub_group_rules: 
+05/13/2020 08:30:28:: Int64Index([739, 742, 744, 752, 753, 756, 759, 767, 768, 769, 770], dtype='int64')
+05/13/2020 08:30:29:: base group:40
+05/13/2020 08:30:29:: left tree :10
+05/13/2020 08:30:29:: right tree:39
+05/13/2020 08:30:29:: zero node name: 37:(b35==0) 
+05/13/2020 08:30:29:: one node name: 38:(b35==1) 
+05/13/2020 08:30:29:: add childs
+05/13/2020 08:30:29:: sub group size is 10, smaller than 32
+05/13/2020 08:30:29:: sub_group_rules: 
+05/13/2020 08:30:29:: Int64Index([742, 744, 752, 753, 756, 759, 767, 768, 769, 770], dtype='int64')
+05/13/2020 08:30:29:: base group:39
+05/13/2020 08:30:29:: left tree :38
+05/13/2020 08:30:29:: right tree:9
+05/13/2020 08:30:29:: zero node name: 39:(b34==0) 
+05/13/2020 08:30:29:: one node name: 40:(b34==1) 
+05/13/2020 08:30:29:: add childs
+05/13/2020 08:30:29:: base group:38
+05/13/2020 08:30:29:: left tree :37
+05/13/2020 08:30:29:: right tree:6
+05/13/2020 08:30:29:: zero node name: 41:(b32==0) 
+05/13/2020 08:30:29:: one node name: 42:(b32==1) 
+05/13/2020 08:30:29:: add childs
+05/13/2020 08:30:29:: base group:37
+05/13/2020 08:30:29:: left tree :2
+05/13/2020 08:30:29:: right tree:37
+05/13/2020 08:30:29:: zero node name: 43:(b0==0) 
+05/13/2020 08:30:29:: one node name: 44:(b0==1) 
+05/13/2020 08:30:29:: add childs
+05/13/2020 08:30:29:: sub group size is 2, smaller than 32
+05/13/2020 08:30:29:: sub_group_rules: 
+05/13/2020 08:30:29:: Int64Index([769, 770], dtype='int64')
+05/13/2020 08:30:29:: base group:37
+05/13/2020 08:30:29:: left tree :0
+05/13/2020 08:30:29:: right tree:37
+05/13/2020 08:30:29:: zero node name: 45:(b0==0) 
+05/13/2020 08:30:29:: one node name: 46:(b0==1) 
+05/13/2020 08:30:29:: add childs
+05/13/2020 08:30:29:: sub group size is 0, smaller than 32
+05/13/2020 08:30:29:: sub_group_rules: 
+05/13/2020 08:30:29:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 47:(b0==0) 
+05/13/2020 08:30:30:: one node name: 48:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 49:(b0==0) 
+05/13/2020 08:30:30:: one node name: 50:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 51:(b0==0) 
+05/13/2020 08:30:30:: one node name: 52:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 53:(b0==0) 
+05/13/2020 08:30:30:: one node name: 54:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 55:(b0==0) 
+05/13/2020 08:30:30:: one node name: 56:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 57:(b0==0) 
+05/13/2020 08:30:30:: one node name: 58:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:30:: base group:37
+05/13/2020 08:30:30:: left tree :0
+05/13/2020 08:30:30:: right tree:37
+05/13/2020 08:30:30:: zero node name: 59:(b0==0) 
+05/13/2020 08:30:30:: one node name: 60:(b0==1) 
+05/13/2020 08:30:30:: add childs
+05/13/2020 08:30:30:: sub group size is 0, smaller than 32
+05/13/2020 08:30:30:: sub_group_rules: 
+05/13/2020 08:30:30:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 61:(b0==0) 
+05/13/2020 08:30:31:: one node name: 62:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 63:(b0==0) 
+05/13/2020 08:30:31:: one node name: 64:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 65:(b0==0) 
+05/13/2020 08:30:31:: one node name: 66:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 67:(b0==0) 
+05/13/2020 08:30:31:: one node name: 68:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 69:(b0==0) 
+05/13/2020 08:30:31:: one node name: 70:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:31:: base group:37
+05/13/2020 08:30:31:: left tree :0
+05/13/2020 08:30:31:: right tree:37
+05/13/2020 08:30:31:: zero node name: 71:(b0==0) 
+05/13/2020 08:30:31:: one node name: 72:(b0==1) 
+05/13/2020 08:30:31:: add childs
+05/13/2020 08:30:31:: sub group size is 0, smaller than 32
+05/13/2020 08:30:31:: sub_group_rules: 
+05/13/2020 08:30:31:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 73:(b0==0) 
+05/13/2020 08:30:32:: one node name: 74:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 75:(b0==0) 
+05/13/2020 08:30:32:: one node name: 76:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 77:(b0==0) 
+05/13/2020 08:30:32:: one node name: 78:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 79:(b0==0) 
+05/13/2020 08:30:32:: one node name: 80:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 81:(b0==0) 
+05/13/2020 08:30:32:: one node name: 82:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 83:(b0==0) 
+05/13/2020 08:30:32:: one node name: 84:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:32:: base group:37
+05/13/2020 08:30:32:: left tree :0
+05/13/2020 08:30:32:: right tree:37
+05/13/2020 08:30:32:: zero node name: 85:(b0==0) 
+05/13/2020 08:30:32:: one node name: 86:(b0==1) 
+05/13/2020 08:30:32:: add childs
+05/13/2020 08:30:32:: sub group size is 0, smaller than 32
+05/13/2020 08:30:32:: sub_group_rules: 
+05/13/2020 08:30:32:: Int64Index([], dtype='int64')
+05/13/2020 08:30:33:: base group:37
+05/13/2020 08:30:33:: left tree :0
+05/13/2020 08:30:33:: right tree:37
+05/13/2020 08:30:33:: zero node name: 87:(b0==0) 
+05/13/2020 08:30:33:: one node name: 88:(b0==1) 
+05/13/2020 08:30:33:: add childs
+05/13/2020 08:30:33:: sub group size is 0, smaller than 32
+05/13/2020 08:30:33:: sub_group_rules: 
+05/13/2020 08:30:33:: Int64Index([], dtype='int64')
+05/13/2020 08:30:33:: base group:37
+05/13/2020 08:30:33:: left tree :0
+05/13/2020 08:30:33:: right tree:37
+05/13/2020 08:30:33:: zero node name: 89:(b0==0) 
+05/13/2020 08:30:33:: one node name: 90:(b0==1) 
+05/13/2020 08:30:33:: add childs
+05/13/2020 08:30:33:: sub group size is 0, smaller than 32
+05/13/2020 08:30:33:: sub_group_rules: 
+05/13/2020 08:30:33:: Int64Index([], dtype='int64')
+05/13/2020 08:30:33:: base group:37
+05/13/2020 08:30:33:: left tree :0
+05/13/2020 08:30:33:: right tree:37
+05/13/2020 08:30:33:: zero node name: 91:(b0==0) 
+05/13/2020 08:30:33:: one node name: 92:(b0==1) 
+05/13/2020 08:30:33:: add childs
+05/13/2020 08:30:33:: sub group size is 0, smaller than 32
+05/13/2020 08:30:33:: sub_group_rules: 
+05/13/2020 08:30:33:: Int64Index([], dtype='int64')
+05/13/2020 08:30:33:: base group:37
+05/13/2020 08:30:33:: left tree :0
+05/13/2020 08:30:33:: right tree:37
+05/13/2020 08:30:33:: zero node name: 93:(b0==0) 
+05/13/2020 08:30:33:: one node name: 94:(b0==1) 
+05/13/2020 08:30:33:: add childs
+05/13/2020 08:30:33:: sub group size is 0, smaller than 32
+05/13/2020 08:30:33:: sub_group_rules: 
+05/13/2020 08:30:33:: Int64Index([], dtype='int64')
+05/13/2020 08:30:33:: base group:37
+05/13/2020 08:30:33:: left tree :0
+05/13/2020 08:30:33:: right tree:37
+05/13/2020 08:30:33:: zero node name: 95:(b0==0) 
+05/13/2020 08:30:33:: one node name: 96:(b0==1) 
+05/13/2020 08:30:33:: add childs
+05/13/2020 08:30:33:: sub group size is 0, smaller than 32
+05/13/2020 08:30:33:: sub_group_rules: 
+05/13/2020 08:30:33:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 97:(b0==0) 
+05/13/2020 08:30:34:: one node name: 98:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 99:(b0==0) 
+05/13/2020 08:30:34:: one node name: 100:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 101:(b0==0) 
+05/13/2020 08:30:34:: one node name: 102:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 103:(b0==0) 
+05/13/2020 08:30:34:: one node name: 104:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 105:(b0==0) 
+05/13/2020 08:30:34:: one node name: 106:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:34:: base group:37
+05/13/2020 08:30:34:: left tree :0
+05/13/2020 08:30:34:: right tree:37
+05/13/2020 08:30:34:: zero node name: 107:(b0==0) 
+05/13/2020 08:30:34:: one node name: 108:(b0==1) 
+05/13/2020 08:30:34:: add childs
+05/13/2020 08:30:34:: sub group size is 0, smaller than 32
+05/13/2020 08:30:34:: sub_group_rules: 
+05/13/2020 08:30:34:: Int64Index([], dtype='int64')
+05/13/2020 08:30:35:: base group:37
+05/13/2020 08:30:35:: left tree :0
+05/13/2020 08:30:35:: right tree:37
+05/13/2020 08:30:35:: zero node name: 109:(b0==0) 
+05/13/2020 08:30:35:: one node name: 110:(b0==1) 
+05/13/2020 08:30:35:: add childs
+05/13/2020 08:30:35:: sub group size is 0, smaller than 32
+05/13/2020 08:30:35:: sub_group_rules: 
+05/13/2020 08:30:35:: Int64Index([], dtype='int64')
+05/13/2020 08:30:35:: base group:37
+05/13/2020 08:30:35:: left tree :0
+05/13/2020 08:30:35:: right tree:37
+05/13/2020 08:30:35:: zero node name: 111:(b0==0) 
+05/13/2020 08:30:35:: one node name: 112:(b0==1) 
+05/13/2020 08:30:35:: add childs
+05/13/2020 08:30:35:: sub group size is 0, smaller than 32
+05/13/2020 08:30:35:: sub_group_rules: 
+05/13/2020 08:30:35:: Int64Index([], dtype='int64')
+05/13/2020 08:30:35:: base group:37
+05/13/2020 08:30:35:: left tree :0
+05/13/2020 08:30:35:: right tree:37
+05/13/2020 08:30:35:: zero node name: 113:(b0==0) 
+05/13/2020 08:30:35:: one node name: 114:(b0==1) 
+05/13/2020 08:30:35:: add childs
+05/13/2020 08:30:35:: sub group size is 0, smaller than 32
+05/13/2020 08:30:35:: sub_group_rules: 
+05/13/2020 08:30:35:: Int64Index([], dtype='int64')
+05/13/2020 08:30:35:: base group:37
+05/13/2020 08:30:35:: left tree :0
+05/13/2020 08:30:35:: right tree:37
+05/13/2020 08:30:35:: zero node name: 115:(b0==0) 
+05/13/2020 08:30:35:: one node name: 116:(b0==1) 
+05/13/2020 08:30:35:: add childs
+05/13/2020 08:30:35:: sub group size is 0, smaller than 32
+05/13/2020 08:30:35:: sub_group_rules: 
+05/13/2020 08:30:35:: Int64Index([], dtype='int64')
+05/13/2020 08:30:35:: base group:37
+05/13/2020 08:30:35:: left tree :0
+05/13/2020 08:30:35:: right tree:37
+05/13/2020 08:30:35:: zero node name: 117:(b0==0) 
+05/13/2020 08:30:35:: one node name: 118:(b0==1) 
+05/13/2020 08:30:35:: add childs
+05/13/2020 08:30:35:: sub group size is 0, smaller than 32
+05/13/2020 08:30:35:: sub_group_rules: 
+05/13/2020 08:30:35:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 119:(b0==0) 
+05/13/2020 08:30:36:: one node name: 120:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 121:(b0==0) 
+05/13/2020 08:30:36:: one node name: 122:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 123:(b0==0) 
+05/13/2020 08:30:36:: one node name: 124:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 125:(b0==0) 
+05/13/2020 08:30:36:: one node name: 126:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 127:(b0==0) 
+05/13/2020 08:30:36:: one node name: 128:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:36:: base group:37
+05/13/2020 08:30:36:: left tree :0
+05/13/2020 08:30:36:: right tree:37
+05/13/2020 08:30:36:: zero node name: 129:(b0==0) 
+05/13/2020 08:30:36:: one node name: 130:(b0==1) 
+05/13/2020 08:30:36:: add childs
+05/13/2020 08:30:36:: sub group size is 0, smaller than 32
+05/13/2020 08:30:36:: sub_group_rules: 
+05/13/2020 08:30:36:: Int64Index([], dtype='int64')
+05/13/2020 08:30:37:: base group:37
+05/13/2020 08:30:37:: left tree :0
+05/13/2020 08:30:37:: right tree:37
+05/13/2020 08:30:37:: zero node name: 131:(b0==0) 
+05/13/2020 08:30:37:: one node name: 132:(b0==1) 
+05/13/2020 08:30:37:: add childs
+05/13/2020 08:30:37:: sub group size is 0, smaller than 32
+05/13/2020 08:30:37:: sub_group_rules: 
+05/13/2020 08:30:37:: Int64Index([], dtype='int64')
+05/13/2020 08:30:37:: base group:37
+05/13/2020 08:30:37:: left tree :0
+05/13/2020 08:30:37:: right tree:37
+05/13/2020 08:30:37:: zero node name: 133:(b0==0) 
+05/13/2020 08:30:37:: one node name: 134:(b0==1) 
+05/13/2020 08:30:37:: add childs
+05/13/2020 08:30:37:: sub group size is 0, smaller than 32
+05/13/2020 08:30:37:: sub_group_rules: 
+05/13/2020 08:30:37:: Int64Index([], dtype='int64')
+05/13/2020 08:30:37:: base group:37
+05/13/2020 08:30:37:: left tree :0
+05/13/2020 08:30:37:: right tree:37
+05/13/2020 08:30:37:: zero node name: 135:(b0==0) 
+05/13/2020 08:30:37:: one node name: 136:(b0==1) 
+05/13/2020 08:30:37:: add childs
+05/13/2020 08:30:37:: sub group size is 0, smaller than 32
+05/13/2020 08:30:37:: sub_group_rules: 
+05/13/2020 08:30:37:: Int64Index([], dtype='int64')
+05/13/2020 08:30:37:: base group:37
+05/13/2020 08:30:37:: left tree :0
+05/13/2020 08:30:37:: right tree:37
+05/13/2020 08:30:37:: zero node name: 137:(b0==0) 
+05/13/2020 08:30:37:: one node name: 138:(b0==1) 
+05/13/2020 08:30:37:: add childs
+05/13/2020 08:30:37:: sub group size is 0, smaller than 32
+05/13/2020 08:30:37:: sub_group_rules: 
+05/13/2020 08:30:37:: Int64Index([], dtype='int64')
+05/13/2020 08:30:37:: base group:37
+05/13/2020 08:30:37:: left tree :0
+05/13/2020 08:30:37:: right tree:37
+05/13/2020 08:30:37:: zero node name: 139:(b0==0) 
+05/13/2020 08:30:37:: one node name: 140:(b0==1) 
+05/13/2020 08:30:37:: add childs
+05/13/2020 08:30:37:: sub group size is 0, smaller than 32
+05/13/2020 08:30:37:: sub_group_rules: 
+05/13/2020 08:30:37:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 141:(b0==0) 
+05/13/2020 08:30:38:: one node name: 142:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 143:(b0==0) 
+05/13/2020 08:30:38:: one node name: 144:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 145:(b0==0) 
+05/13/2020 08:30:38:: one node name: 146:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 147:(b0==0) 
+05/13/2020 08:30:38:: one node name: 148:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 149:(b0==0) 
+05/13/2020 08:30:38:: one node name: 150:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 151:(b0==0) 
+05/13/2020 08:30:38:: one node name: 152:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:38:: base group:37
+05/13/2020 08:30:38:: left tree :0
+05/13/2020 08:30:38:: right tree:37
+05/13/2020 08:30:38:: zero node name: 153:(b0==0) 
+05/13/2020 08:30:38:: one node name: 154:(b0==1) 
+05/13/2020 08:30:38:: add childs
+05/13/2020 08:30:38:: sub group size is 0, smaller than 32
+05/13/2020 08:30:38:: sub_group_rules: 
+05/13/2020 08:30:38:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 155:(b0==0) 
+05/13/2020 08:30:39:: one node name: 156:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 157:(b0==0) 
+05/13/2020 08:30:39:: one node name: 158:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 159:(b0==0) 
+05/13/2020 08:30:39:: one node name: 160:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 161:(b0==0) 
+05/13/2020 08:30:39:: one node name: 162:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 163:(b0==0) 
+05/13/2020 08:30:39:: one node name: 164:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 165:(b0==0) 
+05/13/2020 08:30:39:: one node name: 166:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:39:: base group:37
+05/13/2020 08:30:39:: left tree :0
+05/13/2020 08:30:39:: right tree:37
+05/13/2020 08:30:39:: zero node name: 167:(b0==0) 
+05/13/2020 08:30:39:: one node name: 168:(b0==1) 
+05/13/2020 08:30:39:: add childs
+05/13/2020 08:30:39:: sub group size is 0, smaller than 32
+05/13/2020 08:30:39:: sub_group_rules: 
+05/13/2020 08:30:39:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 169:(b0==0) 
+05/13/2020 08:30:40:: one node name: 170:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 171:(b0==0) 
+05/13/2020 08:30:40:: one node name: 172:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 173:(b0==0) 
+05/13/2020 08:30:40:: one node name: 174:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 175:(b0==0) 
+05/13/2020 08:30:40:: one node name: 176:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 177:(b0==0) 
+05/13/2020 08:30:40:: one node name: 178:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:40:: base group:37
+05/13/2020 08:30:40:: left tree :0
+05/13/2020 08:30:40:: right tree:37
+05/13/2020 08:30:40:: zero node name: 179:(b0==0) 
+05/13/2020 08:30:40:: one node name: 180:(b0==1) 
+05/13/2020 08:30:40:: add childs
+05/13/2020 08:30:40:: sub group size is 0, smaller than 32
+05/13/2020 08:30:40:: sub_group_rules: 
+05/13/2020 08:30:40:: Int64Index([], dtype='int64')
+05/13/2020 08:30:41:: base group:37
+05/13/2020 08:30:41:: left tree :0
+05/13/2020 08:30:41:: right tree:37
+05/13/2020 08:30:41:: zero node name: 181:(b0==0) 
+05/13/2020 08:30:41:: one node name: 182:(b0==1) 
+05/13/2020 08:30:41:: add childs
+05/13/2020 08:30:41:: sub group size is 0, smaller than 32
+05/13/2020 08:30:41:: sub_group_rules: 
+05/13/2020 08:30:41:: Int64Index([], dtype='int64')
+05/13/2020 08:30:41:: base group:37
+05/13/2020 08:30:41:: left tree :0
+05/13/2020 08:30:41:: right tree:37
+05/13/2020 08:30:41:: zero node name: 183:(b0==0) 
+05/13/2020 08:30:41:: one node name: 184:(b0==1) 
+05/13/2020 08:30:41:: add childs
+05/13/2020 08:30:41:: sub group size is 0, smaller than 32
+05/13/2020 08:30:41:: sub_group_rules: 
+05/13/2020 08:30:41:: Int64Index([], dtype='int64')
+05/13/2020 08:30:41:: base group:37
+05/13/2020 08:30:41:: left tree :0
+05/13/2020 08:30:41:: right tree:37
+05/13/2020 08:30:41:: zero node name: 185:(b0==0) 
+05/13/2020 08:30:41:: one node name: 186:(b0==1) 
+05/13/2020 08:30:41:: add childs
+05/13/2020 08:30:41:: sub group size is 0, smaller than 32
+05/13/2020 08:30:41:: sub_group_rules: 
+05/13/2020 08:30:41:: Int64Index([], dtype='int64')
+05/13/2020 08:30:41:: base group:37
+05/13/2020 08:30:41:: left tree :0
+05/13/2020 08:30:41:: right tree:37
+05/13/2020 08:30:41:: zero node name: 187:(b0==0) 
+05/13/2020 08:30:41:: one node name: 188:(b0==1) 
+05/13/2020 08:30:41:: add childs
+05/13/2020 08:30:41:: sub group size is 0, smaller than 32
+05/13/2020 08:30:41:: sub_group_rules: 
+05/13/2020 08:30:41:: Int64Index([], dtype='int64')
+05/13/2020 08:30:41:: base group:37
+05/13/2020 08:30:41:: left tree :0
+05/13/2020 08:30:41:: right tree:37
+05/13/2020 08:30:41:: zero node name: 189:(b0==0) 
+05/13/2020 08:30:41:: one node name: 190:(b0==1) 
+05/13/2020 08:30:41:: add childs
+05/13/2020 08:30:41:: sub group size is 0, smaller than 32
+05/13/2020 08:30:41:: sub_group_rules: 
+05/13/2020 08:30:41:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 191:(b0==0) 
+05/13/2020 08:30:42:: one node name: 192:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 193:(b0==0) 
+05/13/2020 08:30:42:: one node name: 194:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 195:(b0==0) 
+05/13/2020 08:30:42:: one node name: 196:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 197:(b0==0) 
+05/13/2020 08:30:42:: one node name: 198:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 199:(b0==0) 
+05/13/2020 08:30:42:: one node name: 200:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:42:: base group:37
+05/13/2020 08:30:42:: left tree :0
+05/13/2020 08:30:42:: right tree:37
+05/13/2020 08:30:42:: zero node name: 201:(b0==0) 
+05/13/2020 08:30:42:: one node name: 202:(b0==1) 
+05/13/2020 08:30:42:: add childs
+05/13/2020 08:30:42:: sub group size is 0, smaller than 32
+05/13/2020 08:30:42:: sub_group_rules: 
+05/13/2020 08:30:42:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 203:(b0==0) 
+05/13/2020 08:30:43:: one node name: 204:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 205:(b0==0) 
+05/13/2020 08:30:43:: one node name: 206:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 207:(b0==0) 
+05/13/2020 08:30:43:: one node name: 208:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 209:(b0==0) 
+05/13/2020 08:30:43:: one node name: 210:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 211:(b0==0) 
+05/13/2020 08:30:43:: one node name: 212:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:43:: base group:37
+05/13/2020 08:30:43:: left tree :0
+05/13/2020 08:30:43:: right tree:37
+05/13/2020 08:30:43:: zero node name: 213:(b0==0) 
+05/13/2020 08:30:43:: one node name: 214:(b0==1) 
+05/13/2020 08:30:43:: add childs
+05/13/2020 08:30:43:: sub group size is 0, smaller than 32
+05/13/2020 08:30:43:: sub_group_rules: 
+05/13/2020 08:30:43:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 215:(b0==0) 
+05/13/2020 08:30:44:: one node name: 216:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 217:(b0==0) 
+05/13/2020 08:30:44:: one node name: 218:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 219:(b0==0) 
+05/13/2020 08:30:44:: one node name: 220:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 221:(b0==0) 
+05/13/2020 08:30:44:: one node name: 222:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 223:(b0==0) 
+05/13/2020 08:30:44:: one node name: 224:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 225:(b0==0) 
+05/13/2020 08:30:44:: one node name: 226:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:44:: base group:37
+05/13/2020 08:30:44:: left tree :0
+05/13/2020 08:30:44:: right tree:37
+05/13/2020 08:30:44:: zero node name: 227:(b0==0) 
+05/13/2020 08:30:44:: one node name: 228:(b0==1) 
+05/13/2020 08:30:44:: add childs
+05/13/2020 08:30:44:: sub group size is 0, smaller than 32
+05/13/2020 08:30:44:: sub_group_rules: 
+05/13/2020 08:30:44:: Int64Index([], dtype='int64')
+05/13/2020 08:30:45:: base group:37
+05/13/2020 08:30:45:: left tree :0
+05/13/2020 08:30:45:: right tree:37
+05/13/2020 08:30:45:: zero node name: 229:(b0==0) 
+05/13/2020 08:30:45:: one node name: 230:(b0==1) 
+05/13/2020 08:30:45:: add childs
+05/13/2020 08:30:45:: sub group size is 0, smaller than 32
+05/13/2020 08:30:45:: sub_group_rules: 
+05/13/2020 08:30:45:: Int64Index([], dtype='int64')
+05/13/2020 08:30:45:: base group:37
+05/13/2020 08:30:45:: left tree :0
+05/13/2020 08:30:45:: right tree:37
+05/13/2020 08:30:45:: zero node name: 231:(b0==0) 
+05/13/2020 08:30:45:: one node name: 232:(b0==1) 
+05/13/2020 08:30:45:: add childs
+05/13/2020 08:30:45:: sub group size is 0, smaller than 32
+05/13/2020 08:30:45:: sub_group_rules: 
+05/13/2020 08:30:45:: Int64Index([], dtype='int64')
+05/13/2020 08:30:45:: base group:37
+05/13/2020 08:30:45:: left tree :0
+05/13/2020 08:30:45:: right tree:37
+05/13/2020 08:30:45:: zero node name: 233:(b0==0) 
+05/13/2020 08:30:45:: one node name: 234:(b0==1) 
+05/13/2020 08:30:45:: add childs
+05/13/2020 08:30:45:: sub group size is 0, smaller than 32
+05/13/2020 08:30:45:: sub_group_rules: 
+05/13/2020 08:30:45:: Int64Index([], dtype='int64')
+05/13/2020 08:30:45:: base group:37
+05/13/2020 08:30:45:: left tree :0
+05/13/2020 08:30:45:: right tree:37
+05/13/2020 08:30:45:: zero node name: 235:(b0==0) 
+05/13/2020 08:30:45:: one node name: 236:(b0==1) 
+05/13/2020 08:30:45:: add childs
+05/13/2020 08:30:45:: sub group size is 0, smaller than 32
+05/13/2020 08:30:45:: sub_group_rules: 
+05/13/2020 08:30:45:: Int64Index([], dtype='int64')
+05/13/2020 08:30:45:: base group:37
+05/13/2020 08:30:45:: left tree :0
+05/13/2020 08:30:45:: right tree:37
+05/13/2020 08:30:45:: zero node name: 237:(b0==0) 
+05/13/2020 08:30:45:: one node name: 238:(b0==1) 
+05/13/2020 08:30:45:: add childs
+05/13/2020 08:30:45:: sub group size is 0, smaller than 32
+05/13/2020 08:30:45:: sub_group_rules: 
+05/13/2020 08:30:45:: Int64Index([], dtype='int64')
+05/13/2020 08:30:46:: base group:37
+05/13/2020 08:30:46:: left tree :0
+05/13/2020 08:30:46:: right tree:37
+05/13/2020 08:30:46:: zero node name: 239:(b0==0) 
+05/13/2020 08:30:46:: one node name: 240:(b0==1) 
+05/13/2020 08:30:46:: add childs
+05/13/2020 08:30:46:: sub group size is 0, smaller than 32
+05/13/2020 08:30:46:: sub_group_rules: 
+05/13/2020 08:30:46:: Int64Index([], dtype='int64')
+05/13/2020 08:30:46:: base group:37
+05/13/2020 08:30:46:: left tree :0
+05/13/2020 08:30:46:: right tree:37
+05/13/2020 08:30:46:: zero node name: 241:(b0==0) 
+05/13/2020 08:30:46:: one node name: 242:(b0==1) 
+05/13/2020 08:30:46:: add childs
+05/13/2020 08:30:46:: sub group size is 0, smaller than 32
+05/13/2020 08:30:46:: sub_group_rules: 
+05/13/2020 08:30:46:: Int64Index([], dtype='int64')
+05/13/2020 08:30:46:: base group:37
+05/13/2020 08:30:46:: left tree :0
+05/13/2020 08:30:46:: right tree:37
+05/13/2020 08:30:46:: zero node name: 243:(b0==0) 
+05/13/2020 08:30:46:: one node name: 244:(b0==1) 
+05/13/2020 08:30:46:: add childs
+05/13/2020 08:30:46:: sub group size is 0, smaller than 32
+05/13/2020 08:30:46:: sub_group_rules: 
+05/13/2020 08:30:46:: Int64Index([], dtype='int64')
+05/13/2020 08:30:46:: base group:37
+05/13/2020 08:30:46:: left tree :0
+05/13/2020 08:30:46:: right tree:37
+05/13/2020 08:30:46:: zero node name: 245:(b0==0) 
+05/13/2020 08:30:46:: one node name: 246:(b0==1) 
+05/13/2020 08:30:46:: add childs
+05/13/2020 08:30:46:: sub group size is 0, smaller than 32
+05/13/2020 08:30:46:: sub_group_rules: 
+05/13/2020 08:30:46:: Int64Index([], dtype='int64')
+05/13/2020 08:30:46:: base group:37
+05/13/2020 08:30:46:: left tree :0
+05/13/2020 08:30:46:: right tree:37
+05/13/2020 08:30:46:: zero node name: 247:(b0==0) 
+05/13/2020 08:30:46:: one node name: 248:(b0==1) 
+05/13/2020 08:30:46:: add childs
+05/13/2020 08:30:46:: sub group size is 0, smaller than 32
+05/13/2020 08:30:46:: sub_group_rules: 
+05/13/2020 08:30:46:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 249:(b0==0) 
+05/13/2020 08:30:47:: one node name: 250:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 251:(b0==0) 
+05/13/2020 08:30:47:: one node name: 252:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 253:(b0==0) 
+05/13/2020 08:30:47:: one node name: 254:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 255:(b0==0) 
+05/13/2020 08:30:47:: one node name: 256:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 257:(b0==0) 
+05/13/2020 08:30:47:: one node name: 258:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:47:: base group:37
+05/13/2020 08:30:47:: left tree :0
+05/13/2020 08:30:47:: right tree:37
+05/13/2020 08:30:47:: zero node name: 259:(b0==0) 
+05/13/2020 08:30:47:: one node name: 260:(b0==1) 
+05/13/2020 08:30:47:: add childs
+05/13/2020 08:30:47:: sub group size is 0, smaller than 32
+05/13/2020 08:30:47:: sub_group_rules: 
+05/13/2020 08:30:47:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 261:(b0==0) 
+05/13/2020 08:30:48:: one node name: 262:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 263:(b0==0) 
+05/13/2020 08:30:48:: one node name: 264:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 265:(b0==0) 
+05/13/2020 08:30:48:: one node name: 266:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 267:(b0==0) 
+05/13/2020 08:30:48:: one node name: 268:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 269:(b0==0) 
+05/13/2020 08:30:48:: one node name: 270:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 271:(b0==0) 
+05/13/2020 08:30:48:: one node name: 272:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:48:: base group:37
+05/13/2020 08:30:48:: left tree :0
+05/13/2020 08:30:48:: right tree:37
+05/13/2020 08:30:48:: zero node name: 273:(b0==0) 
+05/13/2020 08:30:48:: one node name: 274:(b0==1) 
+05/13/2020 08:30:48:: add childs
+05/13/2020 08:30:48:: sub group size is 0, smaller than 32
+05/13/2020 08:30:48:: sub_group_rules: 
+05/13/2020 08:30:48:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 275:(b0==0) 
+05/13/2020 08:30:49:: one node name: 276:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 277:(b0==0) 
+05/13/2020 08:30:49:: one node name: 278:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 279:(b0==0) 
+05/13/2020 08:30:49:: one node name: 280:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 281:(b0==0) 
+05/13/2020 08:30:49:: one node name: 282:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 283:(b0==0) 
+05/13/2020 08:30:49:: one node name: 284:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 285:(b0==0) 
+05/13/2020 08:30:49:: one node name: 286:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:49:: sub group size is 0, smaller than 32
+05/13/2020 08:30:49:: sub_group_rules: 
+05/13/2020 08:30:49:: Int64Index([], dtype='int64')
+05/13/2020 08:30:49:: base group:37
+05/13/2020 08:30:49:: left tree :0
+05/13/2020 08:30:49:: right tree:37
+05/13/2020 08:30:49:: zero node name: 287:(b0==0) 
+05/13/2020 08:30:49:: one node name: 288:(b0==1) 
+05/13/2020 08:30:49:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 289:(b0==0) 
+05/13/2020 08:30:50:: one node name: 290:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 291:(b0==0) 
+05/13/2020 08:30:50:: one node name: 292:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 293:(b0==0) 
+05/13/2020 08:30:50:: one node name: 294:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 295:(b0==0) 
+05/13/2020 08:30:50:: one node name: 296:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 297:(b0==0) 
+05/13/2020 08:30:50:: one node name: 298:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:50:: base group:37
+05/13/2020 08:30:50:: left tree :0
+05/13/2020 08:30:50:: right tree:37
+05/13/2020 08:30:50:: zero node name: 299:(b0==0) 
+05/13/2020 08:30:50:: one node name: 300:(b0==1) 
+05/13/2020 08:30:50:: add childs
+05/13/2020 08:30:50:: sub group size is 0, smaller than 32
+05/13/2020 08:30:50:: sub_group_rules: 
+05/13/2020 08:30:50:: Int64Index([], dtype='int64')
+05/13/2020 08:30:51:: base group:37
+05/13/2020 08:30:51:: left tree :0
+05/13/2020 08:30:51:: right tree:37
+05/13/2020 08:30:51:: zero node name: 301:(b0==0) 
+05/13/2020 08:30:51:: one node name: 302:(b0==1) 
+05/13/2020 08:30:51:: add childs
+05/13/2020 08:30:51:: sub group size is 0, smaller than 32
+05/13/2020 08:30:51:: sub_group_rules: 
+05/13/2020 08:30:51:: Int64Index([], dtype='int64')
+05/13/2020 08:30:51:: base group:37
+05/13/2020 08:30:51:: left tree :0
+05/13/2020 08:30:51:: right tree:37
+05/13/2020 08:30:51:: zero node name: 303:(b0==0) 
+05/13/2020 08:30:51:: one node name: 304:(b0==1) 
+05/13/2020 08:30:51:: add childs
+05/13/2020 08:30:51:: sub group size is 0, smaller than 32
+05/13/2020 08:30:51:: sub_group_rules: 
+05/13/2020 08:30:51:: Int64Index([], dtype='int64')
+05/13/2020 08:30:51:: base group:37
+05/13/2020 08:30:51:: left tree :0
+05/13/2020 08:30:51:: right tree:37
+05/13/2020 08:30:51:: zero node name: 305:(b0==0) 
+05/13/2020 08:30:51:: one node name: 306:(b0==1) 
+05/13/2020 08:30:51:: add childs
+05/13/2020 08:30:51:: sub group size is 0, smaller than 32
+05/13/2020 08:30:51:: sub_group_rules: 
+05/13/2020 08:30:51:: Int64Index([], dtype='int64')
+05/13/2020 08:30:51:: base group:37
+05/13/2020 08:30:51:: left tree :0
+05/13/2020 08:30:51:: right tree:37
+05/13/2020 08:30:51:: zero node name: 307:(b0==0) 
+05/13/2020 08:30:51:: one node name: 308:(b0==1) 
+05/13/2020 08:30:51:: add childs
+05/13/2020 08:30:51:: sub group size is 0, smaller than 32
+05/13/2020 08:30:51:: sub_group_rules: 
+05/13/2020 08:30:51:: Int64Index([], dtype='int64')
+05/13/2020 08:30:51:: base group:37
+05/13/2020 08:30:51:: left tree :0
+05/13/2020 08:30:51:: right tree:37
+05/13/2020 08:30:51:: zero node name: 309:(b0==0) 
+05/13/2020 08:30:51:: one node name: 310:(b0==1) 
+05/13/2020 08:30:51:: add childs
+05/13/2020 08:30:51:: sub group size is 0, smaller than 32
+05/13/2020 08:30:51:: sub_group_rules: 
+05/13/2020 08:30:51:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 311:(b0==0) 
+05/13/2020 08:30:52:: one node name: 312:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 313:(b0==0) 
+05/13/2020 08:30:52:: one node name: 314:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 315:(b0==0) 
+05/13/2020 08:30:52:: one node name: 316:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 317:(b0==0) 
+05/13/2020 08:30:52:: one node name: 318:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 319:(b0==0) 
+05/13/2020 08:30:52:: one node name: 320:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 321:(b0==0) 
+05/13/2020 08:30:52:: one node name: 322:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:52:: base group:37
+05/13/2020 08:30:52:: left tree :0
+05/13/2020 08:30:52:: right tree:37
+05/13/2020 08:30:52:: zero node name: 323:(b0==0) 
+05/13/2020 08:30:52:: one node name: 324:(b0==1) 
+05/13/2020 08:30:52:: add childs
+05/13/2020 08:30:52:: sub group size is 0, smaller than 32
+05/13/2020 08:30:52:: sub_group_rules: 
+05/13/2020 08:30:52:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 325:(b0==0) 
+05/13/2020 08:30:53:: one node name: 326:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 327:(b0==0) 
+05/13/2020 08:30:53:: one node name: 328:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 329:(b0==0) 
+05/13/2020 08:30:53:: one node name: 330:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 331:(b0==0) 
+05/13/2020 08:30:53:: one node name: 332:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 333:(b0==0) 
+05/13/2020 08:30:53:: one node name: 334:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:53:: base group:37
+05/13/2020 08:30:53:: left tree :0
+05/13/2020 08:30:53:: right tree:37
+05/13/2020 08:30:53:: zero node name: 335:(b0==0) 
+05/13/2020 08:30:53:: one node name: 336:(b0==1) 
+05/13/2020 08:30:53:: add childs
+05/13/2020 08:30:53:: sub group size is 0, smaller than 32
+05/13/2020 08:30:53:: sub_group_rules: 
+05/13/2020 08:30:53:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 337:(b0==0) 
+05/13/2020 08:30:54:: one node name: 338:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 339:(b0==0) 
+05/13/2020 08:30:54:: one node name: 340:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 341:(b0==0) 
+05/13/2020 08:30:54:: one node name: 342:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 343:(b0==0) 
+05/13/2020 08:30:54:: one node name: 344:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 345:(b0==0) 
+05/13/2020 08:30:54:: one node name: 346:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 347:(b0==0) 
+05/13/2020 08:30:54:: one node name: 348:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:54:: base group:37
+05/13/2020 08:30:54:: left tree :0
+05/13/2020 08:30:54:: right tree:37
+05/13/2020 08:30:54:: zero node name: 349:(b0==0) 
+05/13/2020 08:30:54:: one node name: 350:(b0==1) 
+05/13/2020 08:30:54:: add childs
+05/13/2020 08:30:54:: sub group size is 0, smaller than 32
+05/13/2020 08:30:54:: sub_group_rules: 
+05/13/2020 08:30:54:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 351:(b0==0) 
+05/13/2020 08:30:55:: one node name: 352:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 353:(b0==0) 
+05/13/2020 08:30:55:: one node name: 354:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 355:(b0==0) 
+05/13/2020 08:30:55:: one node name: 356:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 357:(b0==0) 
+05/13/2020 08:30:55:: one node name: 358:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 359:(b0==0) 
+05/13/2020 08:30:55:: one node name: 360:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:55:: base group:37
+05/13/2020 08:30:55:: left tree :0
+05/13/2020 08:30:55:: right tree:37
+05/13/2020 08:30:55:: zero node name: 361:(b0==0) 
+05/13/2020 08:30:55:: one node name: 362:(b0==1) 
+05/13/2020 08:30:55:: add childs
+05/13/2020 08:30:55:: sub group size is 0, smaller than 32
+05/13/2020 08:30:55:: sub_group_rules: 
+05/13/2020 08:30:55:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 363:(b0==0) 
+05/13/2020 08:30:56:: one node name: 364:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 365:(b0==0) 
+05/13/2020 08:30:56:: one node name: 366:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 367:(b0==0) 
+05/13/2020 08:30:56:: one node name: 368:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 369:(b0==0) 
+05/13/2020 08:30:56:: one node name: 370:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 371:(b0==0) 
+05/13/2020 08:30:56:: one node name: 372:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:56:: base group:37
+05/13/2020 08:30:56:: left tree :0
+05/13/2020 08:30:56:: right tree:37
+05/13/2020 08:30:56:: zero node name: 373:(b0==0) 
+05/13/2020 08:30:56:: one node name: 374:(b0==1) 
+05/13/2020 08:30:56:: add childs
+05/13/2020 08:30:56:: sub group size is 0, smaller than 32
+05/13/2020 08:30:56:: sub_group_rules: 
+05/13/2020 08:30:56:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 375:(b0==0) 
+05/13/2020 08:30:57:: one node name: 376:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 377:(b0==0) 
+05/13/2020 08:30:57:: one node name: 378:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 379:(b0==0) 
+05/13/2020 08:30:57:: one node name: 380:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 381:(b0==0) 
+05/13/2020 08:30:57:: one node name: 382:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 383:(b0==0) 
+05/13/2020 08:30:57:: one node name: 384:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:57:: base group:37
+05/13/2020 08:30:57:: left tree :0
+05/13/2020 08:30:57:: right tree:37
+05/13/2020 08:30:57:: zero node name: 385:(b0==0) 
+05/13/2020 08:30:57:: one node name: 386:(b0==1) 
+05/13/2020 08:30:57:: add childs
+05/13/2020 08:30:57:: sub group size is 0, smaller than 32
+05/13/2020 08:30:57:: sub_group_rules: 
+05/13/2020 08:30:57:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 387:(b0==0) 
+05/13/2020 08:30:58:: one node name: 388:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 389:(b0==0) 
+05/13/2020 08:30:58:: one node name: 390:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 391:(b0==0) 
+05/13/2020 08:30:58:: one node name: 392:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 393:(b0==0) 
+05/13/2020 08:30:58:: one node name: 394:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 395:(b0==0) 
+05/13/2020 08:30:58:: one node name: 396:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:58:: base group:37
+05/13/2020 08:30:58:: left tree :0
+05/13/2020 08:30:58:: right tree:37
+05/13/2020 08:30:58:: zero node name: 397:(b0==0) 
+05/13/2020 08:30:58:: one node name: 398:(b0==1) 
+05/13/2020 08:30:58:: add childs
+05/13/2020 08:30:58:: sub group size is 0, smaller than 32
+05/13/2020 08:30:58:: sub_group_rules: 
+05/13/2020 08:30:58:: Int64Index([], dtype='int64')
+05/13/2020 08:30:59:: base group:37
+05/13/2020 08:30:59:: left tree :0
+05/13/2020 08:30:59:: right tree:37
+05/13/2020 08:30:59:: zero node name: 399:(b0==0) 
+05/13/2020 08:30:59:: one node name: 400:(b0==1) 
+05/13/2020 08:30:59:: add childs
+05/13/2020 08:30:59:: sub group size is 0, smaller than 32
+05/13/2020 08:30:59:: sub_group_rules: 
+05/13/2020 08:30:59:: Int64Index([], dtype='int64')
+05/13/2020 08:30:59:: base group:37
+05/13/2020 08:30:59:: left tree :0
+05/13/2020 08:30:59:: right tree:37
+05/13/2020 08:30:59:: zero node name: 401:(b0==0) 
+05/13/2020 08:30:59:: one node name: 402:(b0==1) 
+05/13/2020 08:30:59:: add childs
+05/13/2020 08:30:59:: sub group size is 0, smaller than 32
+05/13/2020 08:30:59:: sub_group_rules: 
+05/13/2020 08:30:59:: Int64Index([], dtype='int64')
+05/13/2020 08:30:59:: base group:37
+05/13/2020 08:30:59:: left tree :0
+05/13/2020 08:30:59:: right tree:37
+05/13/2020 08:30:59:: zero node name: 403:(b0==0) 
+05/13/2020 08:30:59:: one node name: 404:(b0==1) 
+05/13/2020 08:30:59:: add childs
+05/13/2020 08:30:59:: sub group size is 0, smaller than 32
+05/13/2020 08:30:59:: sub_group_rules: 
+05/13/2020 08:30:59:: Int64Index([], dtype='int64')
+05/13/2020 08:30:59:: base group:37
+05/13/2020 08:30:59:: left tree :0
+05/13/2020 08:30:59:: right tree:37
+05/13/2020 08:30:59:: zero node name: 405:(b0==0) 
+05/13/2020 08:30:59:: one node name: 406:(b0==1) 
+05/13/2020 08:30:59:: add childs
+05/13/2020 08:30:59:: sub group size is 0, smaller than 32
+05/13/2020 08:30:59:: sub_group_rules: 
+05/13/2020 08:30:59:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 407:(b0==0) 
+05/13/2020 08:31:00:: one node name: 408:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 409:(b0==0) 
+05/13/2020 08:31:00:: one node name: 410:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 411:(b0==0) 
+05/13/2020 08:31:00:: one node name: 412:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 413:(b0==0) 
+05/13/2020 08:31:00:: one node name: 414:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 415:(b0==0) 
+05/13/2020 08:31:00:: one node name: 416:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 417:(b0==0) 
+05/13/2020 08:31:00:: one node name: 418:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:00:: base group:37
+05/13/2020 08:31:00:: left tree :0
+05/13/2020 08:31:00:: right tree:37
+05/13/2020 08:31:00:: zero node name: 419:(b0==0) 
+05/13/2020 08:31:00:: one node name: 420:(b0==1) 
+05/13/2020 08:31:00:: add childs
+05/13/2020 08:31:00:: sub group size is 0, smaller than 32
+05/13/2020 08:31:00:: sub_group_rules: 
+05/13/2020 08:31:00:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 421:(b0==0) 
+05/13/2020 08:31:01:: one node name: 422:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 423:(b0==0) 
+05/13/2020 08:31:01:: one node name: 424:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 425:(b0==0) 
+05/13/2020 08:31:01:: one node name: 426:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 427:(b0==0) 
+05/13/2020 08:31:01:: one node name: 428:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 429:(b0==0) 
+05/13/2020 08:31:01:: one node name: 430:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 431:(b0==0) 
+05/13/2020 08:31:01:: one node name: 432:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:01:: base group:37
+05/13/2020 08:31:01:: left tree :0
+05/13/2020 08:31:01:: right tree:37
+05/13/2020 08:31:01:: zero node name: 433:(b0==0) 
+05/13/2020 08:31:01:: one node name: 434:(b0==1) 
+05/13/2020 08:31:01:: add childs
+05/13/2020 08:31:01:: sub group size is 0, smaller than 32
+05/13/2020 08:31:01:: sub_group_rules: 
+05/13/2020 08:31:01:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 435:(b0==0) 
+05/13/2020 08:31:02:: one node name: 436:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 437:(b0==0) 
+05/13/2020 08:31:02:: one node name: 438:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 439:(b0==0) 
+05/13/2020 08:31:02:: one node name: 440:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 441:(b0==0) 
+05/13/2020 08:31:02:: one node name: 442:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 443:(b0==0) 
+05/13/2020 08:31:02:: one node name: 444:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 445:(b0==0) 
+05/13/2020 08:31:02:: one node name: 446:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:02:: base group:37
+05/13/2020 08:31:02:: left tree :0
+05/13/2020 08:31:02:: right tree:37
+05/13/2020 08:31:02:: zero node name: 447:(b0==0) 
+05/13/2020 08:31:02:: one node name: 448:(b0==1) 
+05/13/2020 08:31:02:: add childs
+05/13/2020 08:31:02:: sub group size is 0, smaller than 32
+05/13/2020 08:31:02:: sub_group_rules: 
+05/13/2020 08:31:02:: Int64Index([], dtype='int64')
+05/13/2020 08:31:03:: base group:37
+05/13/2020 08:31:03:: left tree :0
+05/13/2020 08:31:03:: right tree:37
+05/13/2020 08:31:03:: zero node name: 449:(b0==0) 
+05/13/2020 08:31:03:: one node name: 450:(b0==1) 
+05/13/2020 08:31:03:: add childs
+05/13/2020 08:31:03:: sub group size is 0, smaller than 32
+05/13/2020 08:31:03:: sub_group_rules: 
+05/13/2020 08:31:03:: Int64Index([], dtype='int64')
+05/13/2020 08:31:03:: base group:37
+05/13/2020 08:31:03:: left tree :0
+05/13/2020 08:31:03:: right tree:37
+05/13/2020 08:31:03:: zero node name: 451:(b0==0) 
+05/13/2020 08:31:03:: one node name: 452:(b0==1) 
+05/13/2020 08:31:03:: add childs
+05/13/2020 08:31:03:: sub group size is 0, smaller than 32
+05/13/2020 08:31:03:: sub_group_rules: 
+05/13/2020 08:31:03:: Int64Index([], dtype='int64')
+05/13/2020 08:31:03:: base group:37
+05/13/2020 08:31:03:: left tree :0
+05/13/2020 08:31:03:: right tree:37
+05/13/2020 08:31:03:: zero node name: 453:(b0==0) 
+05/13/2020 08:31:03:: one node name: 454:(b0==1) 
+05/13/2020 08:31:03:: add childs
+05/13/2020 08:31:03:: sub group size is 0, smaller than 32
+05/13/2020 08:31:03:: sub_group_rules: 
+05/13/2020 08:31:03:: Int64Index([], dtype='int64')
+05/13/2020 08:31:03:: base group:37
+05/13/2020 08:31:03:: left tree :0
+05/13/2020 08:31:03:: right tree:37
+05/13/2020 08:31:03:: zero node name: 455:(b0==0) 
+05/13/2020 08:31:03:: one node name: 456:(b0==1) 
+05/13/2020 08:31:03:: add childs
+05/13/2020 08:31:03:: sub group size is 0, smaller than 32
+05/13/2020 08:31:03:: sub_group_rules: 
+05/13/2020 08:31:03:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 457:(b0==0) 
+05/13/2020 08:31:04:: one node name: 458:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 459:(b0==0) 
+05/13/2020 08:31:04:: one node name: 460:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 461:(b0==0) 
+05/13/2020 08:31:04:: one node name: 462:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 463:(b0==0) 
+05/13/2020 08:31:04:: one node name: 464:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 465:(b0==0) 
+05/13/2020 08:31:04:: one node name: 466:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:04:: base group:37
+05/13/2020 08:31:04:: left tree :0
+05/13/2020 08:31:04:: right tree:37
+05/13/2020 08:31:04:: zero node name: 467:(b0==0) 
+05/13/2020 08:31:04:: one node name: 468:(b0==1) 
+05/13/2020 08:31:04:: add childs
+05/13/2020 08:31:04:: sub group size is 0, smaller than 32
+05/13/2020 08:31:04:: sub_group_rules: 
+05/13/2020 08:31:04:: Int64Index([], dtype='int64')
+05/13/2020 08:31:05:: base group:37
+05/13/2020 08:31:05:: left tree :0
+05/13/2020 08:31:05:: right tree:37
+05/13/2020 08:31:05:: zero node name: 469:(b0==0) 
+05/13/2020 08:31:05:: one node name: 470:(b0==1) 
+05/13/2020 08:31:05:: add childs
+05/13/2020 08:31:05:: sub group size is 0, smaller than 32
+05/13/2020 08:31:05:: sub_group_rules: 
+05/13/2020 08:31:05:: Int64Index([], dtype='int64')
+05/13/2020 08:31:05:: base group:37
+05/13/2020 08:31:05:: left tree :0
+05/13/2020 08:31:05:: right tree:37
+05/13/2020 08:31:05:: zero node name: 471:(b0==0) 
+05/13/2020 08:31:05:: one node name: 472:(b0==1) 
+05/13/2020 08:31:05:: add childs
+05/13/2020 08:31:05:: sub group size is 0, smaller than 32
+05/13/2020 08:31:05:: sub_group_rules: 
+05/13/2020 08:31:05:: Int64Index([], dtype='int64')
+05/13/2020 08:31:05:: base group:37
+05/13/2020 08:31:05:: left tree :0
+05/13/2020 08:31:05:: right tree:37
+05/13/2020 08:31:05:: zero node name: 473:(b0==0) 
+05/13/2020 08:31:05:: one node name: 474:(b0==1) 
+05/13/2020 08:31:05:: add childs
+05/13/2020 08:31:05:: sub group size is 0, smaller than 32
+05/13/2020 08:31:05:: sub_group_rules: 
+05/13/2020 08:31:05:: Int64Index([], dtype='int64')
+05/13/2020 08:31:05:: base group:37
+05/13/2020 08:31:05:: left tree :0
+05/13/2020 08:31:05:: right tree:37
+05/13/2020 08:31:05:: zero node name: 475:(b0==0) 
+05/13/2020 08:31:05:: one node name: 476:(b0==1) 
+05/13/2020 08:31:05:: add childs
+05/13/2020 08:31:05:: sub group size is 0, smaller than 32
+05/13/2020 08:31:05:: sub_group_rules: 
+05/13/2020 08:31:05:: Int64Index([], dtype='int64')
+05/13/2020 08:31:05:: base group:37
+05/13/2020 08:31:05:: left tree :0
+05/13/2020 08:31:05:: right tree:37
+05/13/2020 08:31:05:: zero node name: 477:(b0==0) 
+05/13/2020 08:31:05:: one node name: 478:(b0==1) 
+05/13/2020 08:31:05:: add childs
+05/13/2020 08:31:05:: sub group size is 0, smaller than 32
+05/13/2020 08:31:05:: sub_group_rules: 
+05/13/2020 08:31:05:: Int64Index([], dtype='int64')
+05/13/2020 08:31:06:: base group:37
+05/13/2020 08:31:06:: left tree :0
+05/13/2020 08:31:06:: right tree:37
+05/13/2020 08:31:06:: zero node name: 479:(b0==0) 
+05/13/2020 08:31:06:: one node name: 480:(b0==1) 
+05/13/2020 08:31:06:: add childs
+05/13/2020 08:31:06:: sub group size is 0, smaller than 32
+05/13/2020 08:31:06:: sub_group_rules: 
+05/13/2020 08:31:06:: Int64Index([], dtype='int64')
+05/13/2020 08:31:06:: base group:37
+05/13/2020 08:31:06:: left tree :0
+05/13/2020 08:31:06:: right tree:37
+05/13/2020 08:31:06:: zero node name: 481:(b0==0) 
+05/13/2020 08:31:06:: one node name: 482:(b0==1) 
+05/13/2020 08:31:06:: add childs
+05/13/2020 08:31:06:: sub group size is 0, smaller than 32
+05/13/2020 08:31:06:: sub_group_rules: 
+05/13/2020 08:31:06:: Int64Index([], dtype='int64')
+05/13/2020 08:31:06:: base group:37
+05/13/2020 08:31:06:: left tree :0
+05/13/2020 08:31:06:: right tree:37
+05/13/2020 08:31:06:: zero node name: 483:(b0==0) 
+05/13/2020 08:31:06:: one node name: 484:(b0==1) 
+05/13/2020 08:31:06:: add childs
+05/13/2020 08:31:06:: sub group size is 0, smaller than 32
+05/13/2020 08:31:06:: sub_group_rules: 
+05/13/2020 08:31:06:: Int64Index([], dtype='int64')
+05/13/2020 08:31:07:: base group:37
+05/13/2020 08:31:07:: left tree :0
+05/13/2020 08:31:07:: right tree:37
+05/13/2020 08:31:07:: zero node name: 485:(b0==0) 
+05/13/2020 08:31:07:: one node name: 486:(b0==1) 
+05/13/2020 08:31:07:: add childs
+05/13/2020 08:31:07:: sub group size is 0, smaller than 32
+05/13/2020 08:31:07:: sub_group_rules: 
+05/13/2020 08:31:07:: Int64Index([], dtype='int64')
+05/13/2020 08:31:07:: base group:37
+05/13/2020 08:31:07:: left tree :0
+05/13/2020 08:31:07:: right tree:37
+05/13/2020 08:31:07:: zero node name: 487:(b0==0) 
+05/13/2020 08:31:07:: one node name: 488:(b0==1) 
+05/13/2020 08:31:07:: add childs
+05/13/2020 08:31:07:: sub group size is 0, smaller than 32
+05/13/2020 08:31:07:: sub_group_rules: 
+05/13/2020 08:31:07:: Int64Index([], dtype='int64')
+05/13/2020 08:31:07:: base group:37
+05/13/2020 08:31:07:: left tree :0
+05/13/2020 08:31:07:: right tree:37
+05/13/2020 08:31:07:: zero node name: 489:(b0==0) 
+05/13/2020 08:31:07:: one node name: 490:(b0==1) 
+05/13/2020 08:31:07:: add childs
+05/13/2020 08:31:07:: sub group size is 0, smaller than 32
+05/13/2020 08:31:07:: sub_group_rules: 
+05/13/2020 08:31:07:: Int64Index([], dtype='int64')
+05/13/2020 08:31:07:: base group:37
+05/13/2020 08:31:07:: left tree :0
+05/13/2020 08:31:07:: right tree:37
+05/13/2020 08:31:07:: zero node name: 491:(b0==0) 
+05/13/2020 08:31:07:: one node name: 492:(b0==1) 
+05/13/2020 08:31:07:: add childs
+05/13/2020 08:31:07:: sub group size is 0, smaller than 32
+05/13/2020 08:31:07:: sub_group_rules: 
+05/13/2020 08:31:07:: Int64Index([], dtype='int64')
+05/13/2020 08:31:07:: base group:37
+05/13/2020 08:31:07:: left tree :0
+05/13/2020 08:31:07:: right tree:37
+05/13/2020 08:31:07:: zero node name: 493:(b0==0) 
+05/13/2020 08:31:07:: one node name: 494:(b0==1) 
+05/13/2020 08:31:07:: add childs
+05/13/2020 08:31:07:: sub group size is 0, smaller than 32
+05/13/2020 08:31:07:: sub_group_rules: 
+05/13/2020 08:31:07:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 495:(b0==0) 
+05/13/2020 08:31:08:: one node name: 496:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 497:(b0==0) 
+05/13/2020 08:31:08:: one node name: 498:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 499:(b0==0) 
+05/13/2020 08:31:08:: one node name: 500:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 501:(b0==0) 
+05/13/2020 08:31:08:: one node name: 502:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 503:(b0==0) 
+05/13/2020 08:31:08:: one node name: 504:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:08:: base group:37
+05/13/2020 08:31:08:: left tree :0
+05/13/2020 08:31:08:: right tree:37
+05/13/2020 08:31:08:: zero node name: 505:(b0==0) 
+05/13/2020 08:31:08:: one node name: 506:(b0==1) 
+05/13/2020 08:31:08:: add childs
+05/13/2020 08:31:08:: sub group size is 0, smaller than 32
+05/13/2020 08:31:08:: sub_group_rules: 
+05/13/2020 08:31:08:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 507:(b0==0) 
+05/13/2020 08:31:09:: one node name: 508:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 509:(b0==0) 
+05/13/2020 08:31:09:: one node name: 510:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 511:(b0==0) 
+05/13/2020 08:31:09:: one node name: 512:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 513:(b0==0) 
+05/13/2020 08:31:09:: one node name: 514:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 515:(b0==0) 
+05/13/2020 08:31:09:: one node name: 516:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 517:(b0==0) 
+05/13/2020 08:31:09:: one node name: 518:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:09:: base group:37
+05/13/2020 08:31:09:: left tree :0
+05/13/2020 08:31:09:: right tree:37
+05/13/2020 08:31:09:: zero node name: 519:(b0==0) 
+05/13/2020 08:31:09:: one node name: 520:(b0==1) 
+05/13/2020 08:31:09:: add childs
+05/13/2020 08:31:09:: sub group size is 0, smaller than 32
+05/13/2020 08:31:09:: sub_group_rules: 
+05/13/2020 08:31:09:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 521:(b0==0) 
+05/13/2020 08:31:10:: one node name: 522:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 523:(b0==0) 
+05/13/2020 08:31:10:: one node name: 524:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 525:(b0==0) 
+05/13/2020 08:31:10:: one node name: 526:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 527:(b0==0) 
+05/13/2020 08:31:10:: one node name: 528:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 529:(b0==0) 
+05/13/2020 08:31:10:: one node name: 530:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:10:: base group:37
+05/13/2020 08:31:10:: left tree :0
+05/13/2020 08:31:10:: right tree:37
+05/13/2020 08:31:10:: zero node name: 531:(b0==0) 
+05/13/2020 08:31:10:: one node name: 532:(b0==1) 
+05/13/2020 08:31:10:: add childs
+05/13/2020 08:31:10:: sub group size is 0, smaller than 32
+05/13/2020 08:31:10:: sub_group_rules: 
+05/13/2020 08:31:10:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 533:(b0==0) 
+05/13/2020 08:31:11:: one node name: 534:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 535:(b0==0) 
+05/13/2020 08:31:11:: one node name: 536:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 537:(b0==0) 
+05/13/2020 08:31:11:: one node name: 538:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 539:(b0==0) 
+05/13/2020 08:31:11:: one node name: 540:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 541:(b0==0) 
+05/13/2020 08:31:11:: one node name: 542:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 543:(b0==0) 
+05/13/2020 08:31:11:: one node name: 544:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:11:: base group:37
+05/13/2020 08:31:11:: left tree :0
+05/13/2020 08:31:11:: right tree:37
+05/13/2020 08:31:11:: zero node name: 545:(b0==0) 
+05/13/2020 08:31:11:: one node name: 546:(b0==1) 
+05/13/2020 08:31:11:: add childs
+05/13/2020 08:31:11:: sub group size is 0, smaller than 32
+05/13/2020 08:31:11:: sub_group_rules: 
+05/13/2020 08:31:11:: Int64Index([], dtype='int64')
+05/13/2020 08:31:12:: base group:37
+05/13/2020 08:31:12:: left tree :0
+05/13/2020 08:31:12:: right tree:37
+05/13/2020 08:31:12:: zero node name: 547:(b0==0) 
+05/13/2020 08:31:12:: one node name: 548:(b0==1) 
+05/13/2020 08:31:12:: add childs
+05/13/2020 08:31:12:: sub group size is 0, smaller than 32
+05/13/2020 08:31:12:: sub_group_rules: 
+05/13/2020 08:31:12:: Int64Index([], dtype='int64')
+05/13/2020 08:31:12:: base group:37
+05/13/2020 08:31:12:: left tree :0
+05/13/2020 08:31:12:: right tree:37
+05/13/2020 08:31:12:: zero node name: 549:(b0==0) 
+05/13/2020 08:31:12:: one node name: 550:(b0==1) 
+05/13/2020 08:31:12:: add childs
+05/13/2020 08:31:12:: sub group size is 0, smaller than 32
+05/13/2020 08:31:12:: sub_group_rules: 
+05/13/2020 08:31:12:: Int64Index([], dtype='int64')
+05/13/2020 08:31:12:: base group:37
+05/13/2020 08:31:12:: left tree :0
+05/13/2020 08:31:12:: right tree:37
+05/13/2020 08:31:12:: zero node name: 551:(b0==0) 
+05/13/2020 08:31:12:: one node name: 552:(b0==1) 
+05/13/2020 08:31:12:: add childs
+05/13/2020 08:31:12:: sub group size is 0, smaller than 32
+05/13/2020 08:31:12:: sub_group_rules: 
+05/13/2020 08:31:12:: Int64Index([], dtype='int64')
+05/13/2020 08:31:12:: base group:37
+05/13/2020 08:31:12:: left tree :0
+05/13/2020 08:31:12:: right tree:37
+05/13/2020 08:31:12:: zero node name: 553:(b0==0) 
+05/13/2020 08:31:12:: one node name: 554:(b0==1) 
+05/13/2020 08:31:12:: add childs
+05/13/2020 08:31:12:: sub group size is 0, smaller than 32
+05/13/2020 08:31:12:: sub_group_rules: 
+05/13/2020 08:31:12:: Int64Index([], dtype='int64')
+05/13/2020 08:31:12:: base group:37
+05/13/2020 08:31:12:: left tree :0
+05/13/2020 08:31:12:: right tree:37
+05/13/2020 08:31:12:: zero node name: 555:(b0==0) 
+05/13/2020 08:31:12:: one node name: 556:(b0==1) 
+05/13/2020 08:31:12:: add childs
+05/13/2020 08:31:12:: sub group size is 0, smaller than 32
+05/13/2020 08:31:12:: sub_group_rules: 
+05/13/2020 08:31:12:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 557:(b0==0) 
+05/13/2020 08:31:13:: one node name: 558:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 559:(b0==0) 
+05/13/2020 08:31:13:: one node name: 560:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 561:(b0==0) 
+05/13/2020 08:31:13:: one node name: 562:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 563:(b0==0) 
+05/13/2020 08:31:13:: one node name: 564:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 565:(b0==0) 
+05/13/2020 08:31:13:: one node name: 566:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:13:: base group:37
+05/13/2020 08:31:13:: left tree :0
+05/13/2020 08:31:13:: right tree:37
+05/13/2020 08:31:13:: zero node name: 567:(b0==0) 
+05/13/2020 08:31:13:: one node name: 568:(b0==1) 
+05/13/2020 08:31:13:: add childs
+05/13/2020 08:31:13:: sub group size is 0, smaller than 32
+05/13/2020 08:31:13:: sub_group_rules: 
+05/13/2020 08:31:13:: Int64Index([], dtype='int64')
+05/13/2020 08:31:14:: base group:37
+05/13/2020 08:31:14:: left tree :0
+05/13/2020 08:31:14:: right tree:37
+05/13/2020 08:31:14:: zero node name: 569:(b0==0) 
+05/13/2020 08:31:14:: one node name: 570:(b0==1) 
+05/13/2020 08:31:14:: add childs
+05/13/2020 08:31:14:: sub group size is 0, smaller than 32
+05/13/2020 08:31:14:: sub_group_rules: 
+05/13/2020 08:31:14:: Int64Index([], dtype='int64')
+05/13/2020 08:31:14:: base group:37
+05/13/2020 08:31:14:: left tree :0
+05/13/2020 08:31:14:: right tree:37
+05/13/2020 08:31:14:: zero node name: 571:(b0==0) 
+05/13/2020 08:31:14:: one node name: 572:(b0==1) 
+05/13/2020 08:31:14:: add childs
+05/13/2020 08:31:14:: sub group size is 0, smaller than 32
+05/13/2020 08:31:14:: sub_group_rules: 
+05/13/2020 08:31:14:: Int64Index([], dtype='int64')
+05/13/2020 08:31:14:: base group:37
+05/13/2020 08:31:14:: left tree :0
+05/13/2020 08:31:14:: right tree:37
+05/13/2020 08:31:14:: zero node name: 573:(b0==0) 
+05/13/2020 08:31:14:: one node name: 574:(b0==1) 
+05/13/2020 08:31:14:: add childs
+05/13/2020 08:31:14:: sub group size is 0, smaller than 32
+05/13/2020 08:31:14:: sub_group_rules: 
+05/13/2020 08:31:14:: Int64Index([], dtype='int64')
+05/13/2020 08:31:14:: base group:37
+05/13/2020 08:31:14:: left tree :0
+05/13/2020 08:31:14:: right tree:37
+05/13/2020 08:31:14:: zero node name: 575:(b0==0) 
+05/13/2020 08:31:14:: one node name: 576:(b0==1) 
+05/13/2020 08:31:14:: add childs
+05/13/2020 08:31:14:: sub group size is 0, smaller than 32
+05/13/2020 08:31:14:: sub_group_rules: 
+05/13/2020 08:31:14:: Int64Index([], dtype='int64')
+05/13/2020 08:31:14:: base group:37
+05/13/2020 08:31:14:: left tree :0
+05/13/2020 08:31:14:: right tree:37
+05/13/2020 08:31:14:: zero node name: 577:(b0==0) 
+05/13/2020 08:31:14:: one node name: 578:(b0==1) 
+05/13/2020 08:31:14:: add childs
+05/13/2020 08:31:14:: sub group size is 0, smaller than 32
+05/13/2020 08:31:14:: sub_group_rules: 
+05/13/2020 08:31:14:: Int64Index([], dtype='int64')
+05/13/2020 08:31:15:: base group:37
+05/13/2020 08:31:15:: left tree :0
+05/13/2020 08:31:15:: right tree:37
+05/13/2020 08:31:15:: zero node name: 579:(b0==0) 
+05/13/2020 08:31:15:: one node name: 580:(b0==1) 
+05/13/2020 08:31:15:: add childs
+05/13/2020 08:31:15:: sub group size is 0, smaller than 32
+05/13/2020 08:31:15:: sub_group_rules: 
+05/13/2020 08:31:15:: Int64Index([], dtype='int64')
+05/13/2020 08:31:15:: base group:37
+05/13/2020 08:31:15:: left tree :0
+05/13/2020 08:31:15:: right tree:37
+05/13/2020 08:31:15:: zero node name: 581:(b0==0) 
+05/13/2020 08:31:15:: one node name: 582:(b0==1) 
+05/13/2020 08:31:15:: add childs
+05/13/2020 08:31:15:: sub group size is 0, smaller than 32
+05/13/2020 08:31:15:: sub_group_rules: 
+05/13/2020 08:31:15:: Int64Index([], dtype='int64')
+05/13/2020 08:31:15:: base group:37
+05/13/2020 08:31:15:: left tree :0
+05/13/2020 08:31:15:: right tree:37
+05/13/2020 08:31:15:: zero node name: 583:(b0==0) 
+05/13/2020 08:31:15:: one node name: 584:(b0==1) 
+05/13/2020 08:31:15:: add childs
+05/13/2020 08:31:15:: sub group size is 0, smaller than 32
+05/13/2020 08:31:15:: sub_group_rules: 
+05/13/2020 08:31:15:: Int64Index([], dtype='int64')
+05/13/2020 08:31:15:: base group:37
+05/13/2020 08:31:15:: left tree :0
+05/13/2020 08:31:15:: right tree:37
+05/13/2020 08:31:15:: zero node name: 585:(b0==0) 
+05/13/2020 08:31:15:: one node name: 586:(b0==1) 
+05/13/2020 08:31:15:: add childs
+05/13/2020 08:31:15:: sub group size is 0, smaller than 32
+05/13/2020 08:31:15:: sub_group_rules: 
+05/13/2020 08:31:15:: Int64Index([], dtype='int64')
+05/13/2020 08:31:15:: base group:37
+05/13/2020 08:31:15:: left tree :0
+05/13/2020 08:31:15:: right tree:37
+05/13/2020 08:31:15:: zero node name: 587:(b0==0) 
+05/13/2020 08:31:15:: one node name: 588:(b0==1) 
+05/13/2020 08:31:15:: add childs
+05/13/2020 08:31:15:: sub group size is 0, smaller than 32
+05/13/2020 08:31:15:: sub_group_rules: 
+05/13/2020 08:31:15:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 589:(b0==0) 
+05/13/2020 08:31:16:: one node name: 590:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 591:(b0==0) 
+05/13/2020 08:31:16:: one node name: 592:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 593:(b0==0) 
+05/13/2020 08:31:16:: one node name: 594:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 595:(b0==0) 
+05/13/2020 08:31:16:: one node name: 596:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 597:(b0==0) 
+05/13/2020 08:31:16:: one node name: 598:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 599:(b0==0) 
+05/13/2020 08:31:16:: one node name: 600:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:16:: base group:37
+05/13/2020 08:31:16:: left tree :0
+05/13/2020 08:31:16:: right tree:37
+05/13/2020 08:31:16:: zero node name: 601:(b0==0) 
+05/13/2020 08:31:16:: one node name: 602:(b0==1) 
+05/13/2020 08:31:16:: add childs
+05/13/2020 08:31:16:: sub group size is 0, smaller than 32
+05/13/2020 08:31:16:: sub_group_rules: 
+05/13/2020 08:31:16:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 603:(b0==0) 
+05/13/2020 08:31:17:: one node name: 604:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 605:(b0==0) 
+05/13/2020 08:31:17:: one node name: 606:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 607:(b0==0) 
+05/13/2020 08:31:17:: one node name: 608:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 609:(b0==0) 
+05/13/2020 08:31:17:: one node name: 610:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 611:(b0==0) 
+05/13/2020 08:31:17:: one node name: 612:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 613:(b0==0) 
+05/13/2020 08:31:17:: one node name: 614:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:17:: base group:37
+05/13/2020 08:31:17:: left tree :0
+05/13/2020 08:31:17:: right tree:37
+05/13/2020 08:31:17:: zero node name: 615:(b0==0) 
+05/13/2020 08:31:17:: one node name: 616:(b0==1) 
+05/13/2020 08:31:17:: add childs
+05/13/2020 08:31:17:: sub group size is 0, smaller than 32
+05/13/2020 08:31:17:: sub_group_rules: 
+05/13/2020 08:31:17:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 617:(b0==0) 
+05/13/2020 08:31:18:: one node name: 618:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 619:(b0==0) 
+05/13/2020 08:31:18:: one node name: 620:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 621:(b0==0) 
+05/13/2020 08:31:18:: one node name: 622:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 623:(b0==0) 
+05/13/2020 08:31:18:: one node name: 624:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 625:(b0==0) 
+05/13/2020 08:31:18:: one node name: 626:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 627:(b0==0) 
+05/13/2020 08:31:18:: one node name: 628:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:18:: base group:37
+05/13/2020 08:31:18:: left tree :0
+05/13/2020 08:31:18:: right tree:37
+05/13/2020 08:31:18:: zero node name: 629:(b0==0) 
+05/13/2020 08:31:18:: one node name: 630:(b0==1) 
+05/13/2020 08:31:18:: add childs
+05/13/2020 08:31:18:: sub group size is 0, smaller than 32
+05/13/2020 08:31:18:: sub_group_rules: 
+05/13/2020 08:31:18:: Int64Index([], dtype='int64')
+05/13/2020 08:31:19:: base group:37
+05/13/2020 08:31:19:: left tree :0
+05/13/2020 08:31:19:: right tree:37
+05/13/2020 08:31:19:: zero node name: 631:(b0==0) 
+05/13/2020 08:31:19:: one node name: 632:(b0==1) 
+05/13/2020 08:31:19:: add childs
+05/13/2020 08:31:19:: sub group size is 0, smaller than 32
+05/13/2020 08:31:19:: sub_group_rules: 
+05/13/2020 08:31:19:: Int64Index([], dtype='int64')
+05/13/2020 08:31:19:: base group:37
+05/13/2020 08:31:19:: left tree :0
+05/13/2020 08:31:19:: right tree:37
+05/13/2020 08:31:19:: zero node name: 633:(b0==0) 
+05/13/2020 08:31:19:: one node name: 634:(b0==1) 
+05/13/2020 08:31:19:: add childs
+05/13/2020 08:31:19:: sub group size is 0, smaller than 32
+05/13/2020 08:31:19:: sub_group_rules: 
+05/13/2020 08:31:19:: Int64Index([], dtype='int64')
+05/13/2020 08:31:19:: base group:37
+05/13/2020 08:31:19:: left tree :0
+05/13/2020 08:31:19:: right tree:37
+05/13/2020 08:31:19:: zero node name: 635:(b0==0) 
+05/13/2020 08:31:19:: one node name: 636:(b0==1) 
+05/13/2020 08:31:19:: add childs
+05/13/2020 08:31:19:: sub group size is 0, smaller than 32
+05/13/2020 08:31:19:: sub_group_rules: 
+05/13/2020 08:31:19:: Int64Index([], dtype='int64')
+05/13/2020 08:31:19:: base group:37
+05/13/2020 08:31:19:: left tree :0
+05/13/2020 08:31:19:: right tree:37
+05/13/2020 08:31:19:: zero node name: 637:(b0==0) 
+05/13/2020 08:31:19:: one node name: 638:(b0==1) 
+05/13/2020 08:31:19:: add childs
+05/13/2020 08:31:19:: sub group size is 0, smaller than 32
+05/13/2020 08:31:19:: sub_group_rules: 
+05/13/2020 08:31:19:: Int64Index([], dtype='int64')
+05/13/2020 08:31:19:: base group:37
+05/13/2020 08:31:19:: left tree :0
+05/13/2020 08:31:19:: right tree:37
+05/13/2020 08:31:19:: zero node name: 639:(b0==0) 
+05/13/2020 08:31:19:: one node name: 640:(b0==1) 
+05/13/2020 08:31:19:: add childs
+05/13/2020 08:31:19:: sub group size is 0, smaller than 32
+05/13/2020 08:31:19:: sub_group_rules: 
+05/13/2020 08:31:19:: Int64Index([], dtype='int64')
+05/13/2020 08:31:20:: base group:37
+05/13/2020 08:31:20:: left tree :0
+05/13/2020 08:31:20:: right tree:37
+05/13/2020 08:31:20:: zero node name: 641:(b0==0) 
+05/13/2020 08:31:20:: one node name: 642:(b0==1) 
+05/13/2020 08:31:20:: add childs
+05/13/2020 08:31:20:: sub group size is 0, smaller than 32
+05/13/2020 08:31:20:: sub_group_rules: 
+05/13/2020 08:31:20:: Int64Index([], dtype='int64')

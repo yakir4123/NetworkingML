@@ -53,8 +53,8 @@ def plot(decision_tree, save_file_path):
 
 
 def main():
-    groups = [128, 96, 64, 32, 16]
-    # groups = [300]
+    # groups = [128, 96, 64, 32, 16]
+    groups = [16]
     # logging.info('minimum groups size: {}'.format(groups))
     # exercise1_3_1(groups)
     # exercise1_3_2(groups)
