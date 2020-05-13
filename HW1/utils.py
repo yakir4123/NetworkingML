@@ -190,6 +190,7 @@ def create_tree():
     decision_tree.add_node(str(first_node))
     level = [first_node]
     rules = [rules]
+    i = 0
     nodes_names = [first_node]
     best_bit = first_node
     which_to_check = [1] * 64
@@ -197,7 +198,7 @@ def create_tree():
     print("first bit: " + str(best_bit))
     print("rule_len: " + str(len(rules[0])))
 
-    while(True):
+    while sum(which_to_check) > 0:
 
         gains_compare = []
         best_index = []
@@ -208,21 +209,26 @@ def create_tree():
 
         for node in level:
 
-            _, rules_zero, max_gain_zero = best_bit_by_entropy(rules[0], condition_zero)
-            _, rules_one, max_gain_one = best_bit_by_entropy(rules.pop(-1), condition_one)
-            print('len of rules_zero :' + str(len(rules_zero)))
-            print('len of rules_one :' + str(len(rules_one)))
+            if len(rules[0]) > 32:
 
-            gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
-            max_zero = max(gains_to_check_zero)
-            zero_index = gains_to_check_zero.index(max_zero)
-            gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
-            max_one = max(gains_to_check_one)
-            one_index = gains_to_check_one.index(max_one)
+                _, rules_zero, max_gain_zero = best_bit_by_entropy(rules[0], condition_zero)
+                _, rules_one, max_gain_one = best_bit_by_entropy(rules.pop(-1), condition_one)
+                print('len of rules_zero :' + str(len(rules_zero)))
+                print('len of rules_one :' + str(len(rules_one)))
 
-            next_rules += [rules_zero, rules_one]
-            gains_compare += [max_zero, max_one]
-            best_index += [zero_index, one_index]
+                gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
+                max_zero = max(gains_to_check_zero)
+                zero_index = gains_to_check_zero.index(max_zero)
+                gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
+                max_one = max(gains_to_check_one)
+                one_index = gains_to_check_one.index(max_one)
+
+                next_rules += [rules_zero, rules_one]
+                gains_compare += [max_zero, max_one]
+                best_index += [zero_index, one_index]
+
+        if len(gains_compare) == 0:
+            break
 
         max_gain_index = gains_compare.index(max(gains_compare))
         best_bit = best_index[max_gain_index]
