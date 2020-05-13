@@ -1,10 +1,9 @@
+import logging
 import numpy as np
-import pandas as pd
 import networkx as nx
 
 from HW1 import utils
 from HW1.utils import conditional_entropy
-from sklearn.ensemble import RandomForestRegressor
 
 NUM_OF_BITS = 64
 
@@ -22,29 +21,27 @@ def node_name(tup):
 def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_tree, criteria=None, all_rules=None,
               sub_group_rules=None):
     if len(sub_group_rules) <= group_count or sum(which_to_check) == 1:
+        logging.info("sub group size is " + str(len(sub_group_rules)) + ", smaller than " + str(group_count))
+        logging.info("sub_group_rules: ")
+        logging.info(str(sub_group_rules['rule_number'].index))
         return
 
     which_to_check[last_best_bit] = 0  # [0,0,0,0,1,1,1,1,1....
     prior_knowledge_zero = (last_best_bit, '0')
     prior_knowledge_one = (last_best_bit, '1')
-
-    if criteria is not None:
+    try:
         best_zero_bit, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
         best_one_bit, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
-    else:
-        entropy, _ = np.array(conditional_entropy(all_rules))
-        level = which_to_check.count(0)
-        sorted_entropy = entropy.copy()
-        sorted_entropy.sort()
-        entropy = [2 if b == 0 else a for a, b in
-                   zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
-        best_bit = entropy.index(sorted_entropy[level])
+    except Exception as e:
+        logging.info("sub group size is " + str(len(sub_group_rules)) + ", its greater than " + str(group_count)
+                     + " but all bits known.")
+        logging.info("sub_group_rules: ")
+        logging.info(str(sub_group_rules['rule_number'].index))
+        return
 
-        _, rules_zero = conditional_entropy(sub_group_rules, prior_knowledge_zero)
-        _, rules_one = conditional_entropy(sub_group_rules, prior_knowledge_one)
-        # to have one code for both cases simply "duplicate" the values for both trees
-        best_zero_bit = best_bit
-        best_one_bit = best_bit
+    logging.info("base group:" + str(len(sub_group_rules)))
+    logging.info("left tree :" + str(len(rules_zero)))
+    logging.info("right tree:" + str(len(rules_one)))
     print("===========")
     print("base group:" + str(len(sub_group_rules)))
     print("left tree :" + str(len(rules_zero)))
@@ -54,12 +51,15 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
     # gc.collect()
 
     zero_node_str = node_name(prior_knowledge_zero)
+    logging.info("zero node name: " + zero_node_str)
     zero_edge = (to_connect, zero_node_str)
     decision_tree.add_edge(*zero_edge, object="{ " + str(last_best_bit) + " : 0")
+
     one_node_str = node_name(prior_knowledge_one)
+    logging.info("one node name: " + one_node_str)
     one_edge = (to_connect, one_node_str)
     decision_tree.add_edge(*one_edge, object="{ " + str(last_best_bit) + " : 1")
-
+    logging.info("add childs")
     add_nodes(group_count, best_zero_bit, which_to_check.copy(), zero_node_str, decision_tree, criteria, all_rules,
               rules_zero)
     add_nodes(group_count, best_one_bit, which_to_check.copy(), one_node_str, decision_tree, criteria, all_rules,
@@ -67,21 +67,14 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
 
 
 def create_decision_tree(rules_df, min_group_count, criteria):
-    gains, _ = conditional_entropy(rules_df)
+    gains, _ = conditional_entropy(rules_df, include_wc=(criteria is utils.best_bit_by_IG))
+    logging.info("first bit gains: " + str(gains))
     decision_tree = nx.DiGraph()
     to_check = [1] * 64
-    if criteria is not None:
-        first_node, _ = criteria(rules_df, None, to_check)
-    else:
-        first_node, _ = utils.best_bit_by_IG(rules_df, None, to_check)
+    first_node, _ = criteria(rules_df, None, to_check)
+    logging.info("root node " + str(first_node))
     decision_tree.add_node("root")
     add_nodes(min_group_count, first_node, to_check, "root", decision_tree, criteria, rules_df, rules_df)
 
     return decision_tree
-
-
-def create_random_forest(rules):
-    forest_model = RandomForestRegressor(random_state=1)
-    forest_model.fit(rules, pd.DataFrame())
-    return forest_model
 

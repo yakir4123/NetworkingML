@@ -10,8 +10,10 @@ NUM_OF_BITS = 64
 
 
 def create_rule_table():
-    rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
+    rules_df = pd.read_csv('HW1\\rule01.tsv', sep=' ', index_col=False, header=None,
                            names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
+
+    rules_df['rule_number'] = rules_df.reset_index().index
     rules_df = rules_df.drop(columns=['src_port', 'dst_port', 'prot'])
     rules_df['src_ip'] = rules_df['src_ip'].apply(lambda s: s[1:])
     rules_df['src_ip_rule'] = rules_df['src_ip'].apply(ip_to_rule)
@@ -42,7 +44,7 @@ def rule_power(rule):
     return 2 ** rule.count('*')
 
 
-def conditional_entropy(rules, conditions=None):
+def conditional_entropy(rules, conditions=None, include_wc=True):
     if conditions is not None:
         rules = get_rules_by_condition(rules, conditions)
     P = [0] * 64
@@ -50,9 +52,14 @@ def conditional_entropy(rules, conditions=None):
     for bi in range(0, NUM_OF_BITS):
         try:
             bit_col = 'b_{}'.format(bi)
-            ones = len(rules.loc[(rules[bit_col] == '1')])
-            zeros = len(rules.loc[(rules[bit_col] == '0')])
-            P[bi] = zeros / (zeros + ones)
+            if include_wc:
+                P[bi] = rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum()
+                P[bi] += rules.loc[(rules[bit_col] == '*'), 'rule_power'].sum() / 2
+                P[bi] /= total_rule_power
+            else:
+                zeros = len(rules.loc[(rules[bit_col] == '0'), bit_col])
+                ones = len(rules.loc[(rules[bit_col] == '1'), bit_col])
+                P[bi] = zeros / (zeros + ones)
         except ZeroDivisionError:
             P[bi] = 0
 
@@ -80,22 +87,27 @@ def set_rule_wildcards_bit(rules, condition):
 
 
 def best_bit_by_IG(sub_group_rules, given_bit, which_to_check, *args):
-    entropy, rules = conditional_entropy(sub_group_rules, given_bit)
+    entropy, rules = conditional_entropy(sub_group_rules, given_bit, True)
     entropy = [2 if b == 0 else a for a, b in
                zip(entropy, which_to_check)]  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+    if len(set(entropy)) <= 1:
+        pass
     best_bit = entropy.index(min(entropy))
     return best_bit, rules
 
 
 def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
     entropy, rules = conditional_entropy(sub_group_rules,
-                                         prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+                                         prior_knowledge_zero, False)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
+
+    if len(set(entropy)) <= 1:
+        raise Exception("DeadLock, no entropy")
     best_bit = entropy.index(max(entropy))
     return best_bit, rules, entropy
 
 
 def create_packet_table(num_packets):
-    packet_df = pd.read_csv('ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
+    packet_df = pd.read_csv('HW1\\ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
                             names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot', 'rule'])
     packet_df = packet_df.drop(columns=['src_port', 'dst_port', 'prot'])
     packet_df = packet_df.loc[:num_packets]
@@ -123,12 +135,6 @@ def reduce_mem_usage(df):
     NAlist = []  # Keeps track of columns that have missing values filled in.
     for col in df.columns:
         if df[col].dtype != object:  # Exclude strings
-
-            # Print current column type
-            print("******************************")
-            print("Column: ", col)
-            print("dtype before: ", df[col].dtype)
-
             # make variables for Int, max and min
             mx = df[col].max()
             mn = df[col].min()
