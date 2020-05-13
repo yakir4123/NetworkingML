@@ -3,7 +3,7 @@ import math
 import numpy as np
 import pandas as pd
 import networkx as nx
-
+#import pyplot as plt
 import ipaddress
 
 NUM_OF_BITS = 64
@@ -98,7 +98,7 @@ def create_packet_table(num_packets):
     packet_df = pd.read_csv('ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
                             names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot', 'rule'])
     packet_df = packet_df.drop(columns=['src_port', 'dst_port', 'prot'])
-    packer_df = packet_df.loc[:num_packets]
+    packet_df = packet_df.loc[:num_packets]
     packet_df['src_ip_bits'] = packet_df['src_ip'].apply(ip_to_rule)
     packet_df['dst_ip_bits'] = packet_df['dst_ip'].apply(ip_to_rule)
     packet_df['src_dst_ip_bits'] = packet_df['src_ip_bits'] + packet_df['dst_ip_bits']
@@ -187,32 +187,35 @@ def create_tree():
     gains, rules = conditional_entropy(rules_df)
     decision_tree = nx.Graph()
     first_node = gains.index(max(gains))
-    decision_tree.add_node(str(first_node))
     level = [first_node]
-    rules = [rules]
     i = 0
     nodes_names = [first_node]
     best_bit = first_node
     which_to_check = [1] * 64
     which_to_check[first_node] = 0
+    queue = [rules]
+    decision_tree.add_node(str(best_bit))
     print("first bit: " + str(best_bit))
-    print("rule_len: " + str(len(rules[0])))
+    print("rule_len: " + str(len(rules)))
+    to_connect = [str(best_bit)]
+    which_to_connect = []
 
-    while sum(which_to_check) > 0:
+    while queue != [] and sum(which_to_check) > 1:
 
         gains_compare = []
         best_index = []
-        next_rules = []
+        next_queue = []
         condition_zero = (best_bit, '0')
         condition_one = (best_bit, '1')
-        next_nodes = []
+        temp = []
 
-        for node in level:
+        while queue != []:
 
-            if len(rules[0]) > 32:
-
-                _, rules_zero, max_gain_zero = best_bit_by_entropy(rules[0], condition_zero)
-                _, rules_one, max_gain_one = best_bit_by_entropy(rules.pop(-1), condition_one)
+            if len(queue[0]) > 64:
+                temp += [to_connect.pop(0)]
+                pop = queue.pop(0)
+                _, rules_zero, max_gain_zero = best_bit_by_entropy(pop, condition_zero)
+                _, rules_one, max_gain_one = best_bit_by_entropy(pop, condition_one)
                 print('len of rules_zero :' + str(len(rules_zero)))
                 print('len of rules_one :' + str(len(rules_one)))
 
@@ -223,18 +226,46 @@ def create_tree():
                 max_one = max(gains_to_check_one)
                 one_index = gains_to_check_one.index(max_one)
 
-                next_rules += [rules_zero, rules_one]
+                next_queue += [rules_zero, rules_one]
                 gains_compare += [max_zero, max_one]
                 best_index += [zero_index, one_index]
+                which_to_connect += [i]
+
+            else:
+                queue.pop(0)
+                to_connect.pop(0)
+
+            i += 2
 
         if len(gains_compare) == 0:
             break
-
+        to_connect = temp
+        prev = best_bit
         max_gain_index = gains_compare.index(max(gains_compare))
         best_bit = best_index[max_gain_index]
+        if best_bit == 0:
+            pass
         print("best bit: " + str(best_bit))
         which_to_check[best_bit] = 0
-        level = [best_bit] * len(gains_compare)
-        rules = next_rules
+        queue = next_queue
+
+        print("num to connect: " + str(len(to_connect)))
+        ##########################################i: b_16 = 0 > b_8 = 1
+        temp = []
+        for index in which_to_connect:
+
+            node_zero = "{index}: b_{prev} = 0 > b_{curr}".format(index=str(index), prev=str(prev), curr=str(best_bit))
+            node_one = "{index}: b_{prev} = 1 > b_{curr}".format(index=str(index + 1), prev=str(prev), curr=str(best_bit))
+
+            decision_tree.add_edge(to_connect[0], node_zero)
+            decision_tree.add_edge(to_connect.pop(0), node_one)
+            temp += [node_zero, node_one]
+
+        which_to_connect = []
+        to_connect = temp
+
+    nx.draw(decision_tree, with_labels=True)
+    #plt.show()
+    print(str(decision_tree._node))
 
 create_tree()
