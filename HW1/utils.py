@@ -9,8 +9,10 @@ NUM_OF_BITS = 64
 
 
 def create_rule_table():
-    rules_df = pd.read_csv('rule01.tsv', sep=' ', index_col=False, header=None,
+    rules_df = pd.read_csv('HW1\\rule01.tsv', sep=' ', index_col=False, header=None,
                            names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot'])
+
+    rules_df['rule_number'] = rules_df.reset_index().index
     rules_df = rules_df.drop(columns=['src_port', 'dst_port', 'prot'])
     rules_df['src_ip'] = rules_df['src_ip'].apply(lambda s: s[1:])
     rules_df['src_ip_rule'] = rules_df['src_ip'].apply(ip_to_rule)
@@ -93,10 +95,10 @@ def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
 
 
 def create_packet_table(num_packets):
-    packet_df = pd.read_csv('ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
+    packet_df = pd.read_csv('HW1\\ScrambledPackets01.tsv', sep='\t', index_col=False, header=None,
                             names=['src_ip', 'dst_ip', 'src_port', 'dst_port', 'prot', 'rule'])
     packet_df = packet_df.drop(columns=['src_port', 'dst_port', 'prot'])
-    packer_df = packet_df.loc[:num_packets]
+    packet_df = packet_df.loc[:num_packets]
     packet_df['src_ip_bits'] = packet_df['src_ip'].apply(ip_to_rule)
     packet_df['dst_ip_bits'] = packet_df['dst_ip'].apply(ip_to_rule)
     packet_df['src_dst_ip_bits'] = packet_df['src_ip_bits'] + packet_df['dst_ip_bits']

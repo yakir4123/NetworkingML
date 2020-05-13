@@ -1,9 +1,9 @@
+
 from sklearn.metrics import mean_absolute_error
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 
-def classify_packets(df_packets):
+def classify_packets(df_packets, model):
     # separate to 2 data frames of features and prediction
     features_name = ["b_{}".format(bit) for bit in range(0, 64)]
     features = df_packets[features_name]
@@ -13,7 +13,7 @@ def classify_packets(df_packets):
     train_fet, test_fet, train_pred, test_pred = train_test_split(features, prediction, test_size=0.2, random_state=0)
 
     print('fit model')
-    forest_model = RandomForestRegressor(random_state=1)
+    forest_model = model
     forest_model.fit(train_fet, train_pred)
 
     print('predict')
