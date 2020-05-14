@@ -89,7 +89,7 @@ def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
     entropy, rules = conditional_entropy(sub_group_rules,
                                          prior_knowledge_zero)  # [0,0,1,1...  entropy_zero = [0, 0, 0.7...
     best_bit = entropy.index(max(entropy))
-    return best_bit, rules
+    return best_bit, rules, entropy
 
 
 def create_packet_table(num_packets):

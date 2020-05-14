@@ -32,20 +32,28 @@ def exercise4():
     packetClassifier.classify_packets(packets_df)
 
 
+def exercise2_3_2(groups):
+    rules_df = utils.create_rule_table()
+    for min_group_count in groups:
+        decision_tree = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
+        plot(decision_tree, "{folder}DT_2_3_2_{mgc}".format(folder="output/", mgc=min_group_count))
+
 def plot(decision_tree, save_file_path):
     nx.write_adjlist(decision_tree, save_file_path)
+    print(decision_tree._adj)
     with open(save_file_path + ".log", "w") as logger:
         logger.write("Number of nodes: {}".format(decision_tree.number_of_nodes()) + "\n")
         logger.write("Max depth: {}".format(nx.algorithms.dag.dag_longest_path_length(decision_tree)) + "\n")
         logger.write("longest path: {}".format(nx.algorithms.dag.dag_longest_path(decision_tree)) + "\n")
     nx.draw(decision_tree, with_labels=True)
+    plt.savefig(save_file_path + ".pdf")
     plt.show()
 
 
-def main():
-    groups = [128, 96, 64, 32, 16]
-    # exercise1_3_1(groups)
-    # exercise1_3_2(groups)
-    exercise2(groups)
-    # exercise4()
+groups = [128, 96, 64, 32, 16]
+# exercise1_3_1(groups)
+# exercise1_3_2(groups)
+# exercise2(groups)
+exercise2_3_2(groups)
+# exercise4()
 

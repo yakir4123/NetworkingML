@@ -85,3 +85,105 @@ def create_random_forest(rules):
     forest_model.fit(rules, pd.DataFrame())
     return forest_model
 
+
+def create_tree(rules_df, min_group_count, criteria, is_max):
+
+    gains, rules = conditional_entropy(rules_df)
+    decision_tree = nx.Graph()
+    decision_nodes_path = []
+
+    i = 0
+
+    if is_max:
+        first_node = gains.index(max(gains))
+        which_to_check = [1] * 64
+    else:
+        first_node = gains.index(min(gains))
+        which_to_check = [2] * 64
+
+    best_bit = first_node
+    decision_nodes_path += [best_bit]
+    which_to_check[first_node] = 0
+    queue = [rules]
+    decision_tree.add_node(str(best_bit))
+    print("first bit: " + str(best_bit))
+    print("rule_len: " + str(len(rules)))
+    to_connect = [str(best_bit)]
+    which_to_connect = []
+
+    while queue != [] and 1 < sum(which_to_check) < 126:
+
+        gains_compare = []
+        best_index = []
+        next_queue = []
+        condition_zero = (best_bit, '0')
+        condition_one = (best_bit, '1')
+        temp = []
+
+        while queue != []:
+
+            if len(queue[0]) > min_group_count:
+                temp += [to_connect.pop(0)]
+                pop = queue.pop(0)
+                _, rules_zero, max_gain_zero = criteria(pop, condition_zero)
+                _, rules_one, max_gain_one = criteria(pop, condition_one)
+                print('len of rules_zero :' + str(len(rules_zero)))
+                print('len of rules_one :' + str(len(rules_one)))
+
+                gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
+                gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
+                if is_max:
+                    best_zero = max(gains_to_check_zero)
+                    best_one = max(gains_to_check_one)
+                else:
+                    best_zero = min(gains_to_check_zero)
+                    best_one = min(gains_to_check_one)
+                zero_index = gains_to_check_zero.index(best_zero)
+                one_index = gains_to_check_one.index(best_one)
+
+                next_queue += [rules_zero, rules_one]
+                gains_compare += [best_zero, best_one]
+                best_index += [zero_index, one_index]
+                which_to_connect += [i]
+
+            else:
+                queue.pop(0)
+                to_connect.pop(0)
+
+            i += 2
+
+        if len(gains_compare) == 0 or len(gains_compare) == 128:
+            break
+
+        prev = best_bit
+        to_connect = temp
+        if is_max:
+            best_gain_index = gains_compare.index(max(gains_compare))
+        else:
+            best_gain_index = gains_compare.index(min(gains_compare))
+
+        best_bit = best_index[best_gain_index]
+        decision_nodes_path += [best_bit]
+        print("best bit: " + str(best_bit))
+        which_to_check[best_bit] = 0
+        queue = next_queue
+
+        print("num to connect: " + str(len(to_connect)))
+
+        temp = []
+        for index in which_to_connect:
+
+            node_zero = node_name((best_bit, '0'))
+            node_one = node_name((best_bit, '1'))
+            print("nodes: ",node_zero,node_one)
+
+            decision_tree.add_edge(to_connect[0], node_zero, object="{ " + str(prev) + " : 0")
+            decision_tree.add_edge(to_connect.pop(0), node_one, object="{ " + str(prev) + " : 1")
+            temp += [node_zero, node_one]
+
+        which_to_connect = []
+        to_connect = temp
+
+    print(str(decision_tree._adj))
+
+    return decision_tree, decision_nodes_path
