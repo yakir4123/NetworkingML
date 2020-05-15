@@ -25,7 +25,6 @@ def exercise1_3_2(groups):
         plot(decision_tree, "{folder}DT_1_3_2_{mgc}".format(folder="HW1/output/", mgc=min_group_count))
 
 
-
 def exercise2(groups):
     rules_df = utils.create_rule_table()
     for min_group_count in groups:
@@ -33,10 +32,23 @@ def exercise2(groups):
         plot(decision_tree, "{folder}DT_2_{mgc}".format(folder="output/", mgc=min_group_count))
 
 
-def exercise4():
-    packets_df = utils.create_packet_table(300000)
+def exercise2_3_2(groups):
+    rules_df = utils.create_rule_table()
+    for min_group_count in groups:
+        decision_tree, _ = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
+        plot(decision_tree, "{folder}DT_2_3_2_{mgc}".format(folder="output/", mgc=min_group_count))
+
+
+def exercise3():
+    packets_df = utils.create_packet_table(400000)
     packets_df, NAlist = utils.reduce_mem_usage(packets_df)
-    packetClassifier.classify_packets(packets_df)
+    packetClassifier.classify_packets(packets_df, RandomForestRegressor(random_state=1))
+
+
+def exercise4():
+    packets_df = utils.create_packet_table(400000)
+    packets_df, NAlist = utils.reduce_mem_usage(packets_df)
+    packetClassifier.classify_packets(packets_df, XGBRegressor())
 
 
 def exercise2_3_2(groups):
@@ -44,6 +56,7 @@ def exercise2_3_2(groups):
     for min_group_count in groups:
         decision_tree, _ = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
         plot(decision_tree, "{folder}DT_2_3_2_{mgc}".format(folder="output/", mgc=min_group_count))
+
 
 def plot(decision_tree, save_file_path):
     nx.write_adjlist(decision_tree, save_file_path)

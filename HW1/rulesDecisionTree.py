@@ -85,14 +85,11 @@ def create_random_forest(rules):
 
 
 def create_tree(rules_df, min_group_count, criteria, is_max):
-
     gains, rules = conditional_entropy(rules_df)
     decision_tree = nx.Graph()
     decision_tree = decision_tree.to_directed()
     decision_nodes_path = []
-
     i = 0
-
     if is_max:
         first_node = gains.index(max(gains))
         which_to_check = [1] * 64
