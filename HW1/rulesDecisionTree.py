@@ -103,15 +103,16 @@ def create_tree(rules_df, min_group_count, criteria, is_max):
 
     best_bit = first_node
     decision_nodes_path += [best_bit]
+
+    decision_tree.add_node("root")
+
+    print("root: {best}".format(best=best_bit))
     which_to_check[first_node] = 0
     queue = [rules]
-    decision_tree.add_node(str(best_bit))
-    print("first bit: " + str(best_bit))
-    print("rule_len: " + str(len(rules)))
-    to_connect = [str(best_bit)]
+    to_connect = ["root"]
     which_to_connect = []
 
-    while queue != [] and 1 < sum(which_to_check) < 126:
+    while queue != [] and 1 < sum(which_to_check) < min_group_count:
 
         gains_compare = []
         best_index = []
@@ -120,15 +121,19 @@ def create_tree(rules_df, min_group_count, criteria, is_max):
         condition_one = (best_bit, '1')
         temp = []
 
-        while queue != []:
+        while queue:
 
             if len(queue[0]) > min_group_count:
+                print(to_connect[0], ":")
                 temp += [to_connect.pop(0)]
                 pop = queue.pop(0)
                 _, rules_zero, max_gain_zero = criteria(pop, condition_zero)
                 _, rules_one, max_gain_one = criteria(pop, condition_one)
-                print('len of rules_zero :' + str(len(rules_zero)))
-                print('len of rules_one :' + str(len(rules_one)))
+
+                print('left node {i}:(b{last}==0), num of rules: {num}'
+                      .format(i=i, last=decision_nodes_path[-1], num=str(len(rules_zero))))
+                print('right node {i}:(b{last}==1), num of rules: {num}'
+                      .format(i=i+1, last=decision_nodes_path[-1], num=str(len(rules_one))))
 
                 gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
                 gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
@@ -164,18 +169,14 @@ def create_tree(rules_df, min_group_count, criteria, is_max):
 
         best_bit = best_index[best_gain_index]
         decision_nodes_path += [best_bit]
-        print("best bit: " + str(best_bit))
         which_to_check[best_bit] = 0
         queue = next_queue
-
-        print("num to connect: " + str(len(to_connect)))
 
         temp = []
         for index in which_to_connect:
 
             node_zero = node_name((best_bit, '0'))
             node_one = node_name((best_bit, '1'))
-            print("nodes: ",node_zero,node_one)
 
             decision_tree.add_edge(to_connect[0], node_zero, object="{ " + str(prev) + " : 0")
             decision_tree.add_edge(to_connect.pop(0), node_one, object="{ " + str(prev) + " : 1")
@@ -184,6 +185,6 @@ def create_tree(rules_df, min_group_count, criteria, is_max):
         which_to_connect = []
         to_connect = temp
 
-    print(str(decision_tree._adj))
+    print(decision_nodes_path)
 
     return decision_tree, decision_nodes_path
