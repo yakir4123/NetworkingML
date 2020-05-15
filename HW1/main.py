@@ -11,7 +11,6 @@ from sklearn.ensemble import RandomForestRegressor
 
 
 def exercise1_3_1(groups):
-    # logging.basicConfig(filename="exercise1_3_1_{groups}.log".format(groups=groups), level=logging.INFO)
     rules_df = utils.create_rule_table()
     for min_group_count in groups:
         logging.info("exercise1_3_1 : min sub group %s" % min_group_count)
@@ -26,32 +25,25 @@ def exercise1_3_2(groups):
         plot(decision_tree, "{folder}DT_1_3_2_{mgc}".format(folder="HW1/output/", mgc=min_group_count))
 
 
-def exercise2_3_1(groups):
+
+def exercise2(groups):
     rules_df = utils.create_rule_table()
     for min_group_count in groups:
-        logging.info("exercise2_3_1 : min sub group %s" % min_group_count)
-        decision_tree = rdt.create_decision_tree(*(rules_df, min_group_count, utils.best_bit_by_entropy))
-        plot(decision_tree, "{folder}DT_2_{mgc}".format(folder="HW1/output/", mgc=min_group_count))
+        decision_tree = rdt.create_decision_tree(rules_df, min_group_count, utils.best_bit_by_entropy)
+        plot(decision_tree, "{folder}DT_2_{mgc}".format(folder="output/", mgc=min_group_count))
+
+
+def exercise4():
+    packets_df = utils.create_packet_table(300000)
+    packets_df, NAlist = utils.reduce_mem_usage(packets_df)
+    packetClassifier.classify_packets(packets_df)
 
 
 def exercise2_3_2(groups):
     rules_df = utils.create_rule_table()
     for min_group_count in groups:
-        decision_tree = rdt.create_decision_tree(rules_df, min_group_count, utils.best_bit_by_entropy)
-        plot(decision_tree, "{folder}DT_2_{mgc}".format(folder="HW1/output/", mgc=min_group_count))
-
-
-def exercise3(rows):
-    packets_df = utils.create_packet_table(rows)
-    packets_df, NAlist = utils.reduce_mem_usage(packets_df)
-    packetClassifier.classify_packets(packets_df, RandomForestRegressor(random_state=1, n_estimators=300))
-
-
-def exercise4(rows):
-    packets_df = utils.create_packet_table(rows)
-    packets_df, NAlist = utils.reduce_mem_usage(packets_df)
-    packetClassifier.classify_packets(packets_df, XGBRegressor())
-
+        decision_tree, _ = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
+        plot(decision_tree, "{folder}DT_2_3_2_{mgc}".format(folder="output/", mgc=min_group_count))
 
 def plot(decision_tree, save_file_path):
     nx.write_adjlist(decision_tree, save_file_path)
