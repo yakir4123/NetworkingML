@@ -35,7 +35,7 @@ def exercise4():
 def exercise2_3_2(groups):
     rules_df = utils.create_rule_table()
     for min_group_count in groups:
-        decision_tree = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
+        decision_tree, _ = rdt.create_tree(rules_df, min_group_count, utils.best_bit_by_entropy, True)
         plot(decision_tree, "{folder}DT_2_3_2_{mgc}".format(folder="output/", mgc=min_group_count))
 
 def plot(decision_tree, save_file_path):
