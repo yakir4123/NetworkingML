@@ -30,11 +30,11 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
     prior_knowledge_zero = (last_best_bit, '0')
     prior_knowledge_one = (last_best_bit, '1')
     try:
-        best_zero_bit, rules_zero = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
-        best_one_bit, rules_one = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
+        best_zero_bit, rules_zero, _ = criteria(*(sub_group_rules, prior_knowledge_zero, which_to_check))
+        best_one_bit, rules_one, _ = criteria(*(sub_group_rules, prior_knowledge_one, which_to_check))
     except Exception as e:
         logging.info("sub group size is " + str(len(sub_group_rules)) + ", its greater than " + str(group_count)
-                     + " but all bits known.")
+                     + " but all bits are known.")
         logging.info("sub_group_rules: ")
         logging.info(str(sub_group_rules['rule_number'].index))
         return
@@ -71,7 +71,7 @@ def create_decision_tree(rules_df, min_group_count, criteria):
     logging.info("first bit gains: " + str(gains))
     decision_tree = nx.DiGraph()
     to_check = [1] * 64
-    first_node, _ = criteria(rules_df, None, to_check)
+    first_node, _, _ = criteria(rules_df, None, to_check)
     logging.info("root node " + str(first_node))
     decision_tree.add_node("root")
     add_nodes(min_group_count, first_node, to_check, "root", decision_tree, criteria, rules_df, rules_df)

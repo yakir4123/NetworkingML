@@ -55,7 +55,7 @@ def conditional_entropy(rules, conditions=None, include_wc=True):
             if include_wc:
                 P[bi] = rules.loc[(rules[bit_col] == '0'), 'rule_power'].sum()
                 P[bi] += rules.loc[(rules[bit_col] == '*'), 'rule_power'].sum() / 2
-                P[bi] /= total_rule_power
+                P[bi] /= rules['rule_power'].sum()
             else:
                 zeros = len(rules.loc[(rules[bit_col] == '0'), bit_col])
                 ones = len(rules.loc[(rules[bit_col] == '1'), bit_col])
@@ -93,7 +93,7 @@ def best_bit_by_IG(sub_group_rules, given_bit, which_to_check, *args):
     if len(set(entropy)) <= 1:
         pass
     best_bit = entropy.index(min(entropy))
-    return best_bit, rules
+    return best_bit, rules, entropy
 
 
 def best_bit_by_entropy(sub_group_rules, prior_knowledge_zero, *args):
@@ -174,10 +174,6 @@ def reduce_mem_usage(df):
                         # Make float datatypes 32 bit
             else:
                 df[col] = df[col].astype(np.float32)
-
-            # Print new column type
-            print("dtype after: ", df[col].dtype)
-            print("******************************")
 
     # Print final result
     print("___MEMORY USAGE AFTER COMPLETION:___")
@@ -274,4 +270,7 @@ def create_tree():
     #plt.show()
     print(str(decision_tree._node))
 
-create_tree()
+
+def dist_to_leaves(tree):
+    nodes = (x for x in tree.nodes() if tree.out_degree(x) == 0 and tree.in_degree(x) == 1)
+    return (nx.shortest_path_length(tree, source='root', target=node) for node in nodes)

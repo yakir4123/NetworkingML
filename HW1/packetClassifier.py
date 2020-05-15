@@ -10,12 +10,10 @@ def classify_packets(df_packets, model):
     prediction = df_packets.rule
 
     print('Split the data')
-    train_fet, test_fet, train_pred, test_pred = train_test_split(features, prediction, test_size=0.2, random_state=0)
-
+    train_fet, test_fet, train_val, test_val = train_test_split(features, prediction, test_size=0.2, random_state=0)
     print('fit model')
-    forest_model = model
-    forest_model.fit(train_fet, train_pred)
-
+    model.fit(train_fet, train_val)
     print('predict')
-    prediction_value = forest_model.predict(test_fet)
-    print(mean_absolute_error(test_pred, prediction_value))
+    prediction_value = model.predict(test_fet)
+    print('Success rate: {}'.format(model.score(test_fet, test_val)))
+    print('MSE: {}'.format(mean_absolute_error(test_val, prediction_value)))
