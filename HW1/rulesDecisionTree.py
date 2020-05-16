@@ -1,5 +1,4 @@
 import logging
-import numpy as np
 import pandas as pd
 import networkx as nx
 
@@ -9,6 +8,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 NUM_OF_BITS = 64
 
+
 node_counter = 0
 def node_name(tup):
     global node_counter
@@ -16,9 +16,6 @@ def node_name(tup):
     return '{node_counter}:(b{i}=={val}) ' \
         .format(i=tup[0], val=tup[1], node_counter=node_counter)
 
-
-# def node_name(tup):
-#     return '(b{i}=={val}) '.format(i=tup[0], val=tup[1])
 
 def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_tree, criteria=None, all_rules=None,
               sub_group_rules=None):
@@ -41,13 +38,6 @@ def add_nodes(group_count, last_best_bit, which_to_check, to_connect, decision_t
     logging.info("base group:" + str(len(sub_group_rules)))
     logging.info("left tree :" + str(len(rules_zero)))
     logging.info("right tree:" + str(len(rules_one)))
-    print("===========")
-    print("base group:" + str(len(sub_group_rules)))
-    print("left tree :" + str(len(rules_zero)))
-    print("right tree:" + str(len(rules_one)))
-
-    # we dont need the table after we split it to 2
-    # gc.collect()
 
     zero_node_str = node_name(prior_knowledge_zero)
     logging.info("zero node name: " + zero_node_str)
@@ -84,103 +74,77 @@ def create_random_forest(rules):
     return forest_model
 
 
-def create_tree(rules_df, min_group_count, criteria, is_max):
-    gains, rules = conditional_entropy(rules_df)
-    decision_tree = nx.Graph()
-    decision_tree = decision_tree.to_directed()
-    decision_nodes_path = []
-    i = 0
-    if is_max:
-        first_node = gains.index(max(gains))
-        which_to_check = [1] * 64
-    else:
-        first_node = gains.index(min(gains))
-        which_to_check = [2] * 64
+def create_bfs_tree(rules_df, min_sub_group, criteria):
+    logging.info("create bfs tree, min_sub_group = {}".format(min_sub_group))
 
-    best_bit = first_node
+    decision_tree = nx.DiGraph()
+    best_in_level = max if (criteria == utils.best_bit_by_entropy) else min
+    logging.info("criteria = {}".format("entropy" if (criteria == utils.best_bit_by_entropy) else "IG"))
+
+    decision_nodes_path = []
+    which_to_check = [1] * 64
+
+    best_bit, _, gains = criteria(rules_df, None, which_to_check)
     decision_nodes_path += [best_bit]
+    which_to_check[best_bit] = 0
+    logging.info("level {}, chosen bit = {}".format(which_to_check.count(0), best_bit))
 
     decision_tree.add_node("root")
+    queue = [("root", rules_df)]
+    next_level_queue = []
+    next_level_bits_options = []
 
-    print("root: {best}".format(best=best_bit))
-    which_to_check[first_node] = 0
-    queue = [rules]
-    to_connect = ["root"]
-    which_to_connect = []
+    while queue:
 
-    while queue != [] and 1 < sum(which_to_check) < min_group_count:
+        # adding new nodes by asking best bit from previous level
+        for (rules_name, rules) in queue:
+            condition_zero = (best_bit, '0')
+            condition_one = (best_bit, '1')
+            try:
+                _, rules_zero, _ = criteria(rules, condition_zero, which_to_check)
+                _, rules_one, _ = criteria(rules, condition_one, which_to_check)
+            except Exception:
+                logging.info("{} node has {len} > {mgc}, but no entropy left. so I decided to stop"
+                             .format(rules_name, len=len(rules), mgc=min_sub_group))
+                continue
+            zero_name = node_name(condition_zero)
+            one_name = node_name(condition_one)
+            decision_tree.add_edge(rules_name, zero_name)
+            decision_tree.add_edge(rules_name, one_name)
+            logging.info("add new node " + zero_name)
+            logging.info("add new node " + one_name)
 
-        gains_compare = []
-        best_index = []
-        next_queue = []
-        condition_zero = (best_bit, '0')
-        condition_one = (best_bit, '1')
-        temp = []
-
-        while queue:
-
-            if len(queue[0]) > min_group_count:
-                print(to_connect[0], ":")
-                temp += [to_connect.pop(0)]
-                pop = queue.pop(0)
-                _, rules_zero, max_gain_zero = criteria(pop, condition_zero)
-                _, rules_one, max_gain_one = criteria(pop, condition_one)
-
-                print('left node {i}:(b{last}==0), num of rules: {num}'
-                      .format(i=i, last=decision_nodes_path[-1], num=str(len(rules_zero))))
-                print('right node {i}:(b{last}==1), num of rules: {num}'
-                      .format(i=i+1, last=decision_nodes_path[-1], num=str(len(rules_one))))
-
-                gains_to_check_zero = [max_gain_zero[i] * which_to_check[i] for i in range(64)]
-                gains_to_check_one = [max_gain_one[i] * which_to_check[i] for i in range(64)]
-                if is_max:
-                    best_zero = max(gains_to_check_zero)
-                    best_one = max(gains_to_check_one)
-                else:
-                    best_zero = min(gains_to_check_zero)
-                    best_one = min(gains_to_check_one)
-                zero_index = gains_to_check_zero.index(best_zero)
-                one_index = gains_to_check_one.index(best_one)
-
-                next_queue += [rules_zero, rules_one]
-                gains_compare += [best_zero, best_one]
-                best_index += [zero_index, one_index]
-                which_to_connect += [i]
-
+            if len(rules_zero) > min_sub_group:
+                next_level_queue += [(zero_name, rules_zero)]
+                logging.info("subgroup of " + zero_name + " with size of " + str(len(rules_zero)) + ", will expand it next level")
             else:
-                queue.pop(0)
-                to_connect.pop(0)
+                logging.info("subgroup of " + zero_name + " with size of " + str(len(rules_zero)) + ", stop expand it")
 
-            i += 2
+            if len(rules_one) > min_sub_group:
+                next_level_queue += [(one_name, rules_one)]
+                logging.info("subgroup of " + one_name + " with size of " + str(len(rules_one)) + ", will expand it next level")
+            else:
+                logging.info("subgroup of " + one_name + " with size of " + str(len(rules_one)) + ", stop expand it")
 
-        if len(gains_compare) == 0 or len(gains_compare) == 128:
-            break
+        logging.info("search for next bit.")
+        for (rules_name, rules) in next_level_queue:
+            best_bit, _, max_gain = criteria(rules, None, which_to_check)
+            next_level_bits_options += [(best_bit, max_gain)]
+            logging.info("{} candidate: {} bit with gain of {}.".format(rules_name, best_bit, max_gain))
 
-        prev = best_bit
-        to_connect = temp
-        if is_max:
-            best_gain_index = gains_compare.index(max(gains_compare))
-        else:
-            best_gain_index = gains_compare.index(min(gains_compare))
+        # find the best bit using best_in_level function
+        try:
+            best_bit = best_in_level(next_level_bits_options, key=lambda item: item[1])[0]
+        except ValueError as e:
+            logging.info("finish building the tree, the questions list are:")
+            logging.info(str(decision_nodes_path))
+            return decision_tree
 
-        best_bit = best_index[best_gain_index]
+        next_level_bits_options = []
         decision_nodes_path += [best_bit]
         which_to_check[best_bit] = 0
-        queue = next_queue
+        logging.info("level {}, chosen bit = {}".format(which_to_check.count(0), best_bit))
 
-        temp = []
-        for index in which_to_connect:
+        queue = next_level_queue
+        next_level_queue = []
 
-            node_zero = node_name((best_bit, '0'))
-            node_one = node_name((best_bit, '1'))
-
-            decision_tree.add_edge(to_connect[0], node_zero, object="{ " + str(prev) + " : 0")
-            decision_tree.add_edge(to_connect.pop(0), node_one, object="{ " + str(prev) + " : 1")
-            temp += [node_zero, node_one]
-
-        which_to_connect = []
-        to_connect = temp
-
-    print(decision_nodes_path)
-
-    return decision_tree, decision_nodes_path
