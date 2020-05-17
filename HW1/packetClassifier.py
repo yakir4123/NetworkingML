@@ -1,5 +1,5 @@
 
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error, accuracy_score
 from sklearn.model_selection import train_test_split
 
 
@@ -15,5 +15,5 @@ def classify_packets(df_packets, model):
     model.fit(train_fet, train_val)
     print('predict')
     prediction_value = model.predict(test_fet)
-    print('Success rate: {}'.format(model.score(test_fet, test_val)))
+    print('Success rate: {}'.format(accuracy_score(test_val, prediction_value)))
     print('MSE: {}'.format(mean_absolute_error(test_val, prediction_value)))
