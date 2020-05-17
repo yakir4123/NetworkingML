@@ -143,6 +143,10 @@ def create_bfs_tree(rules_df, min_sub_group, criteria):
         next_level_bits_options = []
         decision_nodes_path += [best_bit]
         which_to_check[best_bit] = 0
+
+        if sum(which_to_check) == 0:
+            logging.info("Asks about all bits:  {}".format(str(decision_nodes_path)))
+            return decision_tree
         logging.info("level {}, chosen bit = {}".format(which_to_check.count(0), best_bit))
 
         queue = next_level_queue

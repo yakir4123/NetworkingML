@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 import HW1.rulesDecisionTree as rdt
 
 from itertools import tee
-from xgboost import XGBRegressor
+from xgboost import XGBClassifier
 from HW1 import utils, packetClassifier
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 
 
 def exercise1_3_1(groups):
@@ -42,13 +43,19 @@ def exercise2_3_2(groups):
 def exercise3(num_of_rules):
     packets_df = utils.create_packet_table(num_of_rules)
     packets_df, NAlist = utils.reduce_mem_usage(packets_df)
-    packetClassifier.classify_packets(packets_df, RandomForestRegressor(random_state=1, n_estimators=200))
+    packetClassifier.classify_packets(packets_df, RandomForestClassifier(random_state=1))
 
 
 def exercise4(num_of_rules):
     packets_df = utils.create_packet_table(num_of_rules)
     packets_df, NAlist = utils.reduce_mem_usage(packets_df)
-    packetClassifier.classify_packets(packets_df, XGBRegressor(max_depth=9))
+    packetClassifier.classify_packets(packets_df, XGBClassifier(max_depth=9))
+
+
+def adaboost_classifier(num_of_rules):
+    packets_df = utils.create_packet_table(num_of_rules)
+    packets_df, NAlist = utils.reduce_mem_usage(packets_df)
+    packetClassifier.classify_packets(packets_df, AdaBoostClassifier())
 
 
 def plot(decision_tree, save_file_path):
@@ -64,13 +71,13 @@ def plot(decision_tree, save_file_path):
 
 
 def main():
-    # groups = [128, 96, 64, 32, 16]
-    groups = [ 16]
+    groups = [128, 96, 64, 32, 16]
     logging.info('minimum groups size: {}'.format(groups))
     # exercise1_3_1(groups)
-    exercise1_3_2(groups)
+    # exercise1_3_2(groups)
     # exercise2_3_1(groups)
     # exercise2_3_2(groups)
-    # exercise3(400000)
-    # exercise4(400000)
+    exercise3(400000)
+    exercise4(400000)
+    adaboost_classifier(400000)
 
